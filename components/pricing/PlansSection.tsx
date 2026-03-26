@@ -1,0 +1,90 @@
+import { Divider } from "@heroui/react"
+import AdsIcon from "@src/svg/AdsIcon"
+import AdsWhiteIcon from "@src/svg/AdsWhiteIcon"
+import QuizIcon from "@src/svg/QuizIcon"
+import QuizWhiteIcon from "@src/svg/QuizWhiteIcon"
+import RightArrowIcon from "@src/svg/RightArrowIcon"
+import TimerIcon from "@src/svg/TimerIcon"
+import TimerWhiteIcon from "@src/svg/TimerWhiteIcon"
+import Link from "next/link"
+
+export default function PlansSection() {
+    return (
+        <div className="plans-section-base">
+            <div className="section-container flex flex-col justify-center">
+                <div className="section-header-container mb-8">
+                    <h2>Choose Your Learning Plan</h2>
+                    <p>Flexible pricing options to match your learning goals and budget</p>
+                </div>
+                <div className="flex items-center justify-between gap-4">
+                    <div className="pricing-card">
+                        <div>
+                            <div className="pricing-card-label">Basic</div>
+                        </div>
+                        <div>
+                            <div className="pricing-card-price">₹149 <sub>/month</sub></div>
+                        </div>
+                        <Divider className="bg-[#9D00FF]" />
+                        <div className="pricing-card-feat">
+                            <AdsIcon />
+                            <div className="pricing-card-feat-label">No Ads</div>
+                        </div>
+                        <div className="pricing-card-feat">
+                            <TimerIcon />
+                            <div className="pricing-card-feat-label">Daily limit - 30 minutes</div>
+                        </div>
+                        <div className="pricing-card-feat">
+                            <QuizIcon />
+                            <div className="pricing-card-feat-label">Quizzes</div>
+                        </div>
+                        <Link href={"/"} className="cta-primary max-w-full!">Buy Now <RightArrowIcon /></Link>
+                    </div>
+                    <div className="pricing-card active">
+                        <div>
+                            <div className="pricing-card-label">Pro</div>
+                        </div>
+                        <div>
+                            <div className="pricing-card-price">₹299 <sub>/month</sub></div>
+                        </div>
+                        <Divider className="bg-[#0000001A]" />
+                        <div className="pricing-card-feat">
+                            <AdsWhiteIcon />
+                            <div className="pricing-card-feat-label">No Ads</div>
+                        </div>
+                        <div className="pricing-card-feat">
+                            <TimerWhiteIcon />
+                            <div className="pricing-card-feat-label">Daily limit - 120 minutes</div>
+                        </div>
+                        <div className="pricing-card-feat">
+                            <QuizWhiteIcon />
+                            <div className="pricing-card-feat-label">Quizzes</div>
+                        </div>
+                        <Link href={"/"} className="cta-default max-w-full!">Buy Now <RightArrowIcon /></Link>
+                    </div>
+                    <div className="pricing-card">
+                        <div>
+                            <div className="pricing-card-label">Premium</div>
+                        </div>
+                        <div>
+                            <div className="pricing-card-price">₹499 <sub>/month</sub></div>
+                        </div>
+                        <Divider className="bg-[#9D00FF]" />
+                        <div className="pricing-card-feat">
+                            <AdsIcon />
+                            <div className="pricing-card-feat-label">No Ads</div>
+                        </div>
+                        <div className="pricing-card-feat">
+                            <TimerIcon />
+                            <div className="pricing-card-feat-label">Daily limit - 240 minutes</div>
+                        </div>
+                        <div className="pricing-card-feat">
+                            <QuizIcon />
+                            <div className="pricing-card-feat-label">Quizzes</div>
+                        </div>
+                        <Link href={"/"} className="cta-primary max-w-full!">Buy Now <RightArrowIcon /></Link>
+                    </div>
+                </div>
+            </div>
+        </div>
+    )
+}

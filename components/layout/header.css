@@ -1,0 +1,11 @@
+.nav-cta-primary {
+    background-image: linear-gradient(to right, #4F29ED, #9D00FF);
+    color: #FFFFFF;
+
+}
+
+.main-header {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 16px;
+}

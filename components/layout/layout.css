@@ -1,0 +1,134 @@
+.header-base {
+    background:
+        linear-gradient(#F9F1FF, #F9F1FF) padding-box,
+        linear-gradient(to right, #FDFBFF, #662D91, #AB7ECC80) border-box;
+    border: 3px solid transparent;
+    border-radius: 50px;
+
+}
+
+
+.navigation-base {
+    position: fixed;
+    top: 20;
+    background: transparent;
+    backdrop-filter: unset;
+}
+
+.mobile-menu {
+    top: 0% !important;
+    height: 100% !important;
+    padding-top: 6rem;
+}
+
+.navbar-content-base {
+    @media screen and (max-width:768px) {
+        flex-direction: row-reverse;
+    }
+}
+
+.navbar-profile-base {
+    @media screen and (max-width:768px) {
+        width: fit-content;
+        flex: none;
+    }
+}
+
+.profile-cta {
+    @media screen and (max-width:768px) {
+        width: fit-content;
+        min-width: 40px;
+    }
+}
+
+/* ======================================== */
+
+/* .mobile-menu {
+    padding: 12px;
+} */
+
+.mobile-menu-item {
+    margin-bottom: 10px;
+}
+
+/* Main Explore / Event row */
+.accordion-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion-main-link {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.accordion-main-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.accordion-arrow {
+    width: 14px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-arrow.open {
+    transform: rotate(180deg);
+}
+
+/* Wrapper animation */
+.accordion-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+}
+
+.accordion-wrapper.expanded {
+    max-height: 800px;
+}
+
+/* Category */
+.accordion-category {
+    margin-top: 8px;
+}
+
+.accordion-header {
+    width: 100%;
+    background: transparent;
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.accordion-category-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* Subcategories */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    padding-left: 12px;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.expanded {
+    max-height: 400px;
+}
+
+.accordion-link {
+    display: block;
+    padding: 6px 0;
+    font-size: 13px;
+    color: var(--secondary-color);
+    text-decoration: none;
+}
