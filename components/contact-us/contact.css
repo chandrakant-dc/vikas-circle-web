@@ -1,0 +1,51 @@
+.contact-page-banner {
+    background-image: url("/contact-bg.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: calc(100vh - 24px);
+    max-height: 28dvw;
+
+    @media screen and (max-width:1400px) {
+        background-size: contain;
+    }
+}
+
+.contact-page-banner-content h2 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.contact-page-banner-content p {
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 20px;
+    max-width: 485px;
+}
+
+.contact-us-main-section {
+    height: 100vh;
+    max-height: 750px;
+}
+
+.contact-section-heading {
+    /* Fallback color for older browsers */
+    color: #333;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 1.2;
+
+    /* Apply the linear gradient as a background image */
+    background-image: linear-gradient(to right, #4F29ED, #9D00FF);
+
+    /* Clip the background to the text area */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* For WebKit browsers */
+
+    /* Make the text color transparent to reveal the background */
+    text-fill-color: transparent;
+    -webkit-text-fill-color: transparent;
+    /* For WebKit browsers */
+    width: fit-content;
+}
