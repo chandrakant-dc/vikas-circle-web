@@ -1,0 +1,35 @@
+.topic-test-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 4rem 0;
+}
+
+.topic-test-count-container {
+    flex: 1;
+    max-width: 315px;
+}
+
+.topic-test-info-card {
+    background-image: linear-gradient(to right, #4F29ED, #9D00FF);
+    height: 128px;
+    border-radius: 10px;
+    width: 100%;
+    padding: 2rem;
+}
+
+.topic-test-question-count-container {
+    width: 100%;
+    box-shadow: 0 0 48px 0 #00000012;
+    height: calc(100% - 128px);
+    margin-top: 2rem;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.count-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: calc(100% - 100px);
+    margin-top: 1rem;
+}
