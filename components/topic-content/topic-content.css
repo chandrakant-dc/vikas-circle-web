@@ -1,0 +1,67 @@
+.topic-page-banner {
+    background-image: url("/subcategory-bg-1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: calc(100vh - 24px);
+    max-height: 28dvw;
+
+    @media screen and (max-width:1400px) {
+        background-size: contain;
+    }
+}
+
+.topic-page-banner-content h2 {
+    color: #fff;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.topic-page-banner-content p {
+    color: #FFFFFF;
+    font-weight: 300;
+    font-size: 20px;
+    max-width: 760px;
+}
+
+.topic-content {
+    padding: 2rem 0;
+}
+
+.topic-content h2 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #4F29ED;
+}
+
+.topic-content h3 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #4F29ED;
+}
+
+.topic-content h4 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #4F29ED;
+}
+
+.topic-section-container .start-journey-base {
+    background: #FFFFFF;
+}
+
+.topic-section-container .start-journey-base h2 {
+    color: #000;
+}
+
+.topic-section-container .start-journey-base p {
+    color: #000;
+}
+
+.topic-section-container .start-journey-base .cta-default {
+    background-image: linear-gradient(to right, #4F29ED, #9D00FF);
+    color: #FFFFFF;
+}
+
+.topic-section-container .start-journey-base .cta-default svg path {
+    fill: #FFFFFF;
+}
