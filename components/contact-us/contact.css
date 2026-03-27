@@ -26,13 +26,19 @@
 .contact-us-main-section {
     height: 100vh;
     max-height: 750px;
+
+    @media screen and (max-width:1023px) {
+        max-height: none;
+        height: auto;
+        padding: 2rem 1rem;
+    }
 }
 
 .contact-section-heading {
     /* Fallback color for older browsers */
     color: #333;
-    font-size: 36px;
-    font-weight: bold;
+    font-size: 48px;
+    font-weight: 500;
     line-height: 1.2;
 
     /* Apply the linear gradient as a background image */
@@ -48,4 +54,39 @@
     -webkit-text-fill-color: transparent;
     /* For WebKit browsers */
     width: fit-content;
+}
+
+.contact-info-card {
+    border: 1px solid #9D00FF;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.contact-info-label {
+    font-size: 18px;
+    color: #000000;
+    font-weight: 500;
+}
+
+.contact-info-value {
+    font-size: 18px;
+    color: #6B6B6B;
+    font-weight: 400;
+}
+
+.contact-form {
+    width: 100%;
+    max-width: 575px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+
+    @media screen and (max-width:1023px) {
+        max-width: none;
+    }
 }
