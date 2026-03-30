@@ -45,7 +45,7 @@
     object-fit: cover;
 }
 
-.explore-card-content {
+.explore-card-content-main {
     background-color: #0000004D;
     position: absolute;
     top: 0%;

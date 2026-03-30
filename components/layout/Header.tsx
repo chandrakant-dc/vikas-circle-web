@@ -1,6 +1,5 @@
 import {
 	Button,
-	Link,
 	Navbar,
 	NavbarBrand,
 	NavbarContent,
@@ -10,9 +9,9 @@ import {
 	NavbarMenuToggle,
 } from "@heroui/react";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import "./header.css";
-
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
@@ -54,22 +53,22 @@ export default function Header() {
 				justify="center"
 			>
 				<NavbarItem>
-					<Link color="foreground" href="#">
+					<Link color="foreground" href="/">
 						Home
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link color="foreground" href="#">
+					<Link color="foreground" href="/explore">
 						Explore
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link color="foreground" href="#">
+					<Link color="foreground" href="/pricing">
 						Pricing
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link color="foreground" href="#">
+					<Link color="foreground" href="/contact-us">
 						Contact
 					</Link>
 				</NavbarItem>
@@ -105,7 +104,6 @@ export default function Header() {
 										: "foreground"
 							}
 							href="#"
-							size="lg"
 						>
 							{item}
 						</Link>

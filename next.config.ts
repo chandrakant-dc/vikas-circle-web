@@ -3,6 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
 	/* config options here */
 	images: {
+		dangerouslyAllowLocalIP: true,
 		remotePatterns: [
 			{
 				protocol: "https",
@@ -10,6 +11,8 @@ const nextConfig: NextConfig = {
 				port: "",
 				pathname: "/**",
 			},
+			{ protocol: "http", hostname: "localhost", port: "4000" },
+			{ protocol: "http", hostname: "127.0.0.1", port: "4000" },
 		],
 	},
 };

@@ -1,3 +1,4 @@
+import SubCateProvider from "@src/context/sub-category/SubCateProvider";
 import LearningMaterial from "./LearningMaterial";
 import SubCateBanner from "./SubCateBanner";
 import "./subcategory.css";
@@ -11,10 +12,10 @@ export default function SubCateIndex({
 	console.log("subcategoryId", subcategoryId);
 
 	return (
-		<div>
+		<SubCateProvider subcategoryId={subcategoryId}>
 			<SubCateBanner />
 			<YourProgress />
 			<LearningMaterial />
-		</div>
+		</SubCateProvider>
 	);
 }

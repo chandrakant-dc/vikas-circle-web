@@ -1,5 +1,5 @@
-import ExploreIndex from "@src/components/explore/ExploreIndex";
+import ExploreMain from "@src/components/explore/ExploreMain";
 
 export default function ExplorePage() {
-	return <ExploreIndex />;
+	return <ExploreMain />;
 }

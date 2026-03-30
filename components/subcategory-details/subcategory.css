@@ -46,7 +46,9 @@
     font-weight: 300;
     font-size: 16px;
     color: #FFFFFF;
-    width: 100px;
+    min-width: 100px;
+    width: fit-content;
+    padding: 0 .6rem;
     height: 35px;
     border-radius: 10px;
     border: 1px solid #fff;

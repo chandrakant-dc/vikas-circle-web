@@ -1,3 +1,6 @@
+"use client";
+import { ExploreContext } from "@src/context/explore/ExploreContext";
+import { useContext } from "react";
 import StartJourney from "../start-journey/StartJourney";
 import ExploreBanner from "./ExploreBanner";
 import ExploreCard from "./ExploreCard";
@@ -6,21 +9,28 @@ import ExploreSearchbar from "./ExploreSearchbar";
 import "./explore.css";
 
 export default function ExploreIndex() {
+	const { subCategoryList } = useContext(ExploreContext);
 	return (
 		<div>
 			<ExploreBanner />
-			<div className="section-container">
+			<div className="section-container pb-8!">
 				<ExploreSearchbar />
 				<div className="explore-main-section">
 					<div className="explore-filter-container">
 						<ExploreFilter />
 					</div>
 					<div className="explore-cards-container">
-						{Array(9)
-							.fill("")
-							.map((_, i) => (
-								<ExploreCard key={`explore-card-${i + 1}`} />
-							))}
+						{subCategoryList.map((item, i) => (
+							<ExploreCard
+								key={`explore-card-${i + 1}`}
+								id={item?._id}
+								name={item?.name}
+								image={item?.image}
+								description={item?.description}
+								categoryName={item?.category?.name}
+								topicCount={item?.topicCount}
+							/>
+						))}
 					</div>
 				</div>
 			</div>

@@ -1,9 +1,13 @@
+"use client";
+import { SubCateContext } from "@src/context/sub-category/SubCateContext";
 import RightArrowIcon from "@src/svg/RightArrowIcon";
-import TopicCompletedIcon from "@src/svg/TopicCompletedIcon";
 import TopicPrimaryIcon from "@src/svg/TopicPrimaryIcon";
 import Link from "next/link";
+import { useContext } from "react";
 
 export default function LearningMaterial() {
+	const { topicList } = useContext(SubCateContext);
+
 	return (
 		<div className="bg-[#F9F9F9] py-8">
 			<div className="section-container">
@@ -12,7 +16,7 @@ export default function LearningMaterial() {
 					<p>Complete all 50 topics to master DevOps</p>
 				</div>
 
-				<div className="learning-topic-item completed">
+				{/* <div className="learning-topic-item completed">
 					<div className="topic-item-info-wrap">
 						<TopicCompletedIcon />
 						<div className="topic-item-info">
@@ -28,42 +32,27 @@ export default function LearningMaterial() {
 							Learn Now <RightArrowIcon />
 						</Link>
 					</div>
-				</div>
+				</div> */}
 
-				<div className="learning-topic-item">
-					<div className="topic-item-info-wrap">
-						<TopicPrimaryIcon />
-						<div className="topic-item-info">
-							<div className="topic-item-info-stats">
-								<span className="topic-item-count">Topic 03</span>
-								<span className="topic-item-status">Pending</span>
+				{topicList.map((item, i) => (
+					<div className="learning-topic-item" key={`topic-${i + 1}`}>
+						<div className="topic-item-info-wrap">
+							<TopicPrimaryIcon />
+							<div className="topic-item-info">
+								<div className="topic-item-info-stats">
+									<span className="topic-item-count">Topic {i + 1}</span>
+									<span className="topic-item-status">Pending</span>
+								</div>
+								<div className="topic-item-name">{item?.topicName}</div>
 							</div>
-							<div className="topic-item-name">SDLC basics</div>
+						</div>
+						<div className="topic-item-cta-wrap">
+							<Link href={`/topic/${item?._id}`} className="cta-primary h-10!">
+								Learn Now <RightArrowIcon />
+							</Link>
 						</div>
 					</div>
-					<div className="topic-item-cta-wrap">
-						<Link href={"/"} className="cta-primary h-[40px]!">
-							Learn Now <RightArrowIcon />
-						</Link>
-					</div>
-				</div>
-				<div className="learning-topic-item">
-					<div className="topic-item-info-wrap">
-						<TopicPrimaryIcon />
-						<div className="topic-item-info">
-							<div className="topic-item-info-stats">
-								<span className="topic-item-count">Topic 03</span>
-								<span className="topic-item-status">Pending</span>
-							</div>
-							<div className="topic-item-name">SDLC basics</div>
-						</div>
-					</div>
-					<div className="topic-item-cta-wrap">
-						<Link href={"/"} className="cta-primary h-[40px]!">
-							Learn Now <RightArrowIcon />
-						</Link>
-					</div>
-				</div>
+				))}
 			</div>
 		</div>
 	);
