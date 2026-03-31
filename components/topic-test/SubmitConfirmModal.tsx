@@ -1,11 +1,16 @@
 import { Modal, ModalBody, ModalContent } from "@heroui/react";
+import { TopicTestContext } from "@src/context/topic-test/TopicTestContext";
 import CloseIcon from "@src/svg/CloseIcon";
+import { useContext } from "react";
 
 export default function SubmitConfirmModal({
 	isOpen,
 	onClose,
 	onOpenChange,
+	getSubmitPayload,
+	openResultModal,
 }: SubmitConfirmModalProp) {
+	const { handleSubmitQuiz } = useContext(TopicTestContext);
 	return (
 		<Modal
 			isOpen={isOpen}
@@ -35,19 +40,20 @@ export default function SubmitConfirmModal({
 							<div className=" flex justify-center gap-x-4 mt-8">
 								<button
 									type="button"
-									onClick={() => {
-										// if (slug?.topicId) {
-										//     handleSubmitQuizz({ topicId: slug?.topicId })
-										// }
+									onClick={async () => {
+										const data = getSubmitPayload();
+										await handleSubmitQuiz(data);
+										openResultModal();
+										onClose();
 									}}
-									className="font-semibold text-[16px] text-white h-13.5 bg-primary rounded-2xl w-full"
+									className="cta-primary font-semibold text-[16px] text-white h-13.5 bg-primary rounded-2xl w-full"
 								>
 									Submit
 								</button>
 								<button
 									type="button"
 									onClick={onClose}
-									className="font-semibold text-[16px] text-primary h-13.5 bg-white border border-primary rounded-2xl w-full"
+									className="cta-default font-semibold text-[16px] text-primary h-13.5 bg-white border border-[#4F29ED] rounded-2xl w-full"
 								>
 									Cancel
 								</button>
@@ -64,4 +70,9 @@ interface SubmitConfirmModalProp {
 	isOpen: boolean;
 	onOpenChange: () => void;
 	onClose: () => void;
+	getSubmitPayload: () => {
+		questionId: string;
+		selectedOption: string | null;
+	}[];
+	openResultModal: () => void;
 }

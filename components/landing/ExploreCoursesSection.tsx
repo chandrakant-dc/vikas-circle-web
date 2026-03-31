@@ -42,7 +42,7 @@ function ExploreCard({
 	id: string;
 }) {
 	return (
-		<Link href={`/explore?filter=${id}`} className="explore-card">
+		<Link href={`/explore?filter=${id}`} className="explore-card-main">
 			<Image src={image} alt="explore-card-img" height={200} width={200} />
 			<div className="explore-card-content-main">
 				<div>

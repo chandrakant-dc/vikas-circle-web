@@ -1,12 +1,42 @@
+.topic-test-base {
+    height: 100vh;
+    max-height: 750px;
+}
+
 .topic-test-container {
     display: flex;
     justify-content: space-between;
     padding: 4rem 0;
+    gap: 2rem;
+    height: 100%;
 }
 
 .topic-test-count-container {
     flex: 1;
     max-width: 315px;
+
+    @media screen and (max-width:1023px) {
+        display: none;
+    }
+}
+
+.topic-ques-count-mobile-container {
+    display: none;
+
+    @media screen and (max-width:1023px) {
+        display: block;
+    }
+}
+
+.topic-test-count-container-mobile {
+    height: 90%;
+}
+
+.topic-test-ques-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .topic-test-info-card {
@@ -20,7 +50,7 @@
 .topic-test-question-count-container {
     width: 100%;
     box-shadow: 0 0 48px 0 #00000012;
-    height: calc(100% - 128px);
+    height: calc(100% - 175px);
     margin-top: 2rem;
     border-radius: 10px;
     padding: 1rem;

@@ -9,7 +9,7 @@ type QuestionType = {
 	option4: string;
 };
 
-type QuestionState = QuestionType & {
+export type QuestionState = QuestionType & {
 	selectedOption: string | null;
 	tempSelectedOption: string | null;
 	isVisited: boolean;
@@ -97,8 +97,9 @@ export const useTopicTest = (apiQuestions: QuestionType[]) => {
 	const counts = {
 		attempted: questions.filter((q) => q.selectedOption).length,
 		marked: questions.filter((q) => q.isMarkedForReview).length,
-		notAttempted: questions.filter((q) => q.isVisited && !q.selectedOption)
-			.length,
+		notAttempted: questions.filter(
+			(q) => !q.isMarkedForReview && !q.selectedOption,
+		).length,
 		notVisited: questions.filter((q) => !q.isVisited).length,
 	};
 

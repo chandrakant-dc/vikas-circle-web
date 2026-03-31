@@ -29,7 +29,7 @@
     max-height: 750px;
 }
 
-.explore-card {
+.explore-card-main {
     /* width: 290px; */
     width: 100%;
     height: 200px;
@@ -39,7 +39,7 @@
     overflow: hidden;
 }
 
-.explore-card img {
+.explore-card-main img {
     width: 100%;
     height: 100%;
     object-fit: cover;

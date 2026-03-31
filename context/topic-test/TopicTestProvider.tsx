@@ -10,13 +10,16 @@ export default function TopicTestProvider({
 	children: React.ReactNode;
 	topicId: string;
 }) {
-	const { topicQues } = useTopicQuestions(topicId);
+	const { topicQues, handleSubmitQuiz, topicQuizResult } =
+		useTopicQuestions(topicId);
 	const { topicDetails } = useTopicContent(topicId);
 	return (
 		<TopicTestContext.Provider
 			value={{
 				topicQuesList: topicQues,
 				topicDetails,
+				handleSubmitQuiz,
+				topicQuizResult,
 			}}
 		>
 			{children}

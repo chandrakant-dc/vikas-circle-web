@@ -6,7 +6,9 @@ export default function TopicTestIndex({ topicId }: { topicId: string }) {
 
 	return (
 		<TopicTestProvider topicId={topicId}>
-			<TopicTestSection />
+			<div className="topic-test-base">
+				<TopicTestSection />
+			</div>
 		</TopicTestProvider>
 	);
 }

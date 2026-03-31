@@ -1,0 +1,68 @@
+.result-score-card {
+    @media screen and (max-height:867px) {
+        height: 220px;
+    }
+
+    @media screen and (max-width:768px) {
+        .icon-box {
+            svg{
+
+                width: 26px;
+                height: 24px;
+            }
+        }
+    }
+
+}
+
+.result-score-card-img {
+    @media screen and (max-height:867px) {
+        width: 35%;
+    }
+}
+
+.result-score-divider {
+    @media screen and (max-height:867px) {
+        margin-top: 8px;
+        margin-bottom: 8px;
+    }
+    @media screen and (max-width:768px) {
+        margin: 16px 0;
+    }
+}
+
+.score-title {
+    @media screen and (min-width:768px) and (max-width:1024px) {
+        font-size: 20px;
+    }
+
+    @media screen and (max-width:768px) {
+        font-size: 18px;
+    }
+}
+
+
+.score-val {
+    @media screen and (max-width:768px) {
+        font-size: 16px;
+
+        &.score--percentage {
+            width: fit-content;
+            border-radius: 10px;
+            padding: 8px;
+        }
+    }
+}
+
+.result-score-detail-box {
+    @media screen and (max-width:768px) {
+        width: 100%;
+    }
+}
+
+.score-breakdown{
+    @media screen and (max-width:768px) {
+        margin-top: auto;
+        padding-bottom: 8px;
+    }
+}
