@@ -1,5 +1,9 @@
 import ExploreMain from "@src/components/explore/ExploreMain";
+import Loading from "@src/ui/Loading";
+import { Suspense } from "react";
 
 export default function ExplorePage() {
-	return <ExploreMain />;
+	return <Suspense fallback={<Loading />}>
+		<ExploreMain />
+	</Suspense>
 }
