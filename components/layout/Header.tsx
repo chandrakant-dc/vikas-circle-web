@@ -10,27 +10,26 @@ import {
 } from "@heroui/react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 import "./header.css";
 export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+	const pathname = usePathname();
+
+	console.log("pathname", pathname);
+
 
 	const menuItems = [
-		"Profile",
-		"Dashboard",
-		"Activity",
-		"Analytics",
-		"System",
-		"Deployments",
-		"My Settings",
-		"Team Settings",
-		"Help & Feedback",
-		"Log Out",
+		"Home",
+		"Explore",
+		"Pricing",
+		"Contact"
 	];
 	return (
 		<Navbar
 			onMenuOpenChange={setIsMenuOpen}
-			classNames={{ base: "asdasd", wrapper: "main-header" }}
+			classNames={{ base: "bg-white", wrapper: "main-header" }}
 		>
 			<NavbarContent>
 				<NavbarMenuToggle
@@ -49,26 +48,26 @@ export default function Header() {
 			</NavbarContent>
 
 			<NavbarContent
-				className="hidden sm:flex gap-4 zksajhkdjh"
+				className="hidden sm:flex gap-0 zksajhkdjh"
 				justify="center"
 			>
 				<NavbarItem>
-					<Link color="foreground" href="/">
+					<Link color="foreground" href="/" className={`h-10 font-medium rounded-[10px] px-4 flex items-center justify-center ${pathname === "/" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
 						Home
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link color="foreground" href="/explore">
+					<Link color="foreground" href="/explore" className={`h-10 font-medium rounded-[10px] px-4 flex items-center justify-center ${pathname.includes("/explore") ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
 						Explore
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link color="foreground" href="/pricing">
+					<Link color="foreground" href="/pricing" className={`h-10 font-medium rounded-[10px] px-4 flex items-center justify-center ${pathname === "/pricing" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
 						Pricing
 					</Link>
 				</NavbarItem>
 				<NavbarItem>
-					<Link color="foreground" href="/contact-us">
+					<Link color="foreground" href="/contact-us" className={`h-10 font-medium rounded-[10px] px-4 flex items-center justify-center ${pathname === "/contact-us" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
 						Contact
 					</Link>
 				</NavbarItem>

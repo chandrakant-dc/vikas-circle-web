@@ -14,10 +14,10 @@ const nextConfig: NextConfig = {
 			{ protocol: "http", hostname: "localhost", port: "4000" },
 			{ protocol: "http", hostname: "127.0.0.1", port: "4000" },
 			{
-      protocol: "https",
-      hostname: "dfd1-157-20-190-10.ngrok-free.app",
-      pathname: "/**",
-    },
+				protocol: "http",
+				hostname: "dfd1-157-20-190-10.ngrok-free.app",
+				pathname: "/**",
+			},
 		],
 	},
 };
