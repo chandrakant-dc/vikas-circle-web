@@ -18,7 +18,7 @@ export default function ExploreCard({
 	return (
 		<div className="explore-card">
 			<div className="explore-card-img-wrap">
-				<Image src={image} alt="blog-card-img" height={200} width={200} />
+				<Image src={image} alt="blog-card-img" height={500} width={500} />
 			</div>
 			<div className="explore-card-content">
 				<div className="explore-cared-tag">{categoryName}</div>

@@ -11,13 +11,13 @@ const nextConfig: NextConfig = {
 				port: "",
 				pathname: "/**",
 			},
-			{ protocol: "http", hostname: "localhost", port: "4000" },
-			{ protocol: "http", hostname: "127.0.0.1", port: "4000" },
 			{
-				protocol: "http",
-				hostname: "dfd1-157-20-190-10.ngrok-free.app",
+				protocol: "https",
+				hostname: "res.cloudinary.com",
 				pathname: "/**",
 			},
+			{ protocol: "http", hostname: "localhost", port: "4000" },
+			{ protocol: "http", hostname: "127.0.0.1", port: "4000" },
 		],
 	},
 };
