@@ -13,7 +13,7 @@ export default function LearningMaterial() {
 			<div className="section-container">
 				<div className="section-header-container mb-8">
 					<h2 className="max-w-135">Learning Material</h2>
-					<p>Complete all 50 topics to master DevOps</p>
+					<p>Complete all {topicList.length} topics to master DevOps</p>
 				</div>
 
 				{/* <div className="learning-topic-item completed">

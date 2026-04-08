@@ -11,8 +11,8 @@ export default function MobileExploreFilter() {
     const { isOpen, onOpen, onOpenChange } = useDisclosure();
 
     return (
-        <div>
-            <button type="button" onClick={onOpen}>Filter</button>
+        <div className="mt-4 mobile-filter-section-explore">
+            <button type="button" onClick={onOpen} className="cta-primary">Filter By Category</button>
             <Drawer isOpen={isOpen} onOpenChange={onOpenChange} size="xs">
                 <DrawerContent>
                     {(onClose) => (

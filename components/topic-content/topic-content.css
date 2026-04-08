@@ -8,12 +8,26 @@
     @media screen and (max-width:1400px) {
         background-size: contain;
     }
+
+    @media screen and (max-width:767px) {
+        height: 250px;
+        max-height: none;
+        background-size: cover;
+    }
 }
 
 .topic-page-banner-content h2 {
     color: #fff;
     font-size: 48px;
     font-weight: bold;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 38px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 22px;
+    }
 }
 
 .topic-page-banner-content p {
@@ -21,6 +35,14 @@
     font-weight: 300;
     font-size: 20px;
     max-width: 760px;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .topic-content {

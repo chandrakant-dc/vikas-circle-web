@@ -8,12 +8,26 @@
     @media screen and (max-width:1400px) {
         background-size: contain;
     }
+
+    @media screen and (max-width:767px) {
+        height: 250px;
+        max-height: none;
+        background-size: cover;
+    }
 }
 
 .subcategory-page-banner-content h2 {
     color: #fff;
     font-size: 48px;
     font-weight: bold;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 38px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 22px;
+    }
 }
 
 .subcategory-page-banner-content p {
@@ -21,6 +35,14 @@
     font-weight: 300;
     font-size: 20px;
     max-width: 760px;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .subcategory-info {
@@ -34,6 +56,14 @@
     font-weight: 300;
     font-size: 16px;
     color: #FFFFFF;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
+}
+
+.subcategory-info-wrap svg {
+    width: 20px;
 }
 
 .subcategory-info-wrap {
@@ -70,6 +100,12 @@
     /* 3. Clip the backgrounds */
     background-origin: border-box;
     background-clip: padding-box, border-box;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+        height: 30px;
+        margin-bottom: 1rem;
+    }
 }
 
 .your-progress {
@@ -124,11 +160,23 @@
     justify-content: space-between;
     padding: 0 1rem;
     margin-bottom: 2rem;
+
+    @media screen and (max-width:767px) {
+        flex-direction: column;
+        align-items: start;
+        height: auto;
+        padding: 1rem;
+        gap: .5rem;
+    }
 }
 
 .topic-item-count {
     color: #545454;
     font-weight: 400;
+
+    @media screen and (max-width:767px) {
+        font-size: 12px;
+    }
 }
 
 .topic-item-status {
@@ -142,6 +190,10 @@
     align-items: center;
     justify-content: center;
     font-size: 14px;
+
+    @media screen and (max-width:767px) {
+        font-size: 12px;
+    }
 }
 
 .topic-item-info-stats {
@@ -156,6 +208,19 @@
     display: flex;
     gap: 2rem;
     width: calc(100% - 250px);
+
+    @media screen and (max-width:767px) {
+        width: auto;
+        gap: 1rem;
+    }
+}
+
+
+
+.topic-item-name {
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .topic-item-info {
@@ -164,6 +229,16 @@
 
 .topic-item-cta-wrap {
     width: 250px;
+
+    @media screen and (max-width:767px) {
+        width: 100%;
+    }
+}
+
+.topic-item-cta-wrap .cta-primary {
+    @media screen and (max-width:767px) {
+        max-width: 100%;
+    }
 }
 
 .learning-topic-item.completed {

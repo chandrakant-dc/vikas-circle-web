@@ -18,10 +18,10 @@ export default function YourProgress() {
 						radius="sm"
 						showValueLabel={true}
 						size="sm"
-						value={65}
+						value={0}
 					/>
 					<div className="your-progress-info">
-						<div className="your-progress-text">3 of 50 topics completed</div>
+						<div className="your-progress-text">0 of 50 topics completed</div>
 						<div className="your-progress-text-dot"></div>
 						<div className="your-progress-text">Keep going!</div>
 					</div>

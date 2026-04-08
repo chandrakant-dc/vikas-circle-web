@@ -48,7 +48,7 @@ export default function ExploreCard({
 					radius="sm"
 					showValueLabel={true}
 					size="sm"
-					value={65}
+					value={0}
 				/>
 				<Link href={`/explore/${id}`} className="cta-primary max-w-full!">
 					View More <RightArrowIcon />
