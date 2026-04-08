@@ -2,11 +2,12 @@
 import { ExploreContext } from "@src/context/explore/ExploreContext";
 import { useContext } from "react";
 import StartJourney from "../start-journey/StartJourney";
+import "./explore.css";
 import ExploreBanner from "./ExploreBanner";
 import ExploreCard from "./ExploreCard";
 import ExploreFilter from "./ExploreFilter";
 import ExploreSearchbar from "./ExploreSearchbar";
-import "./explore.css";
+import MobileExploreFilter from "./MobileExploreFilter";
 
 export default function ExploreIndex() {
 	const { subCategoryList } = useContext(ExploreContext);
@@ -15,6 +16,7 @@ export default function ExploreIndex() {
 			<ExploreBanner />
 			<div className="section-container pb-8!">
 				<ExploreSearchbar />
+				<MobileExploreFilter />
 				<div className="explore-main-section">
 					<div className="explore-filter-container">
 						<ExploreFilter />

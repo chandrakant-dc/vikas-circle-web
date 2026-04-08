@@ -8,6 +8,12 @@
     @media screen and (max-width:1400px) {
         background-size: contain;
     }
+
+    @media screen and (max-width:767px) {
+        height: 250px;
+        max-height: none;
+        background-size: cover;
+    }
 }
 
 .hero-section-content-wrapper h1,
@@ -16,17 +22,52 @@
     font-weight: bold;
     font-size: 48px;
     line-height: 1.2;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 38px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 22px;
+    }
 }
 
 .hero-section-content-wrapper p {
     color: #fff;
     font-weight: 200;
     font-size: 20px;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
+}
+
+.hero-section-para1 {
+    margin-top: 32px;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        margin-top: 16px;
+    }
+
+    @media screen and (max-width:767px) {
+        margin-top: 6px;
+    }
 }
 
 .explore-course-section-base {
     height: 100vh;
     max-height: 750px;
+
+    @media screen and (max-width:767px) {
+        height: auto;
+        max-height: none;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .explore-card-main {
@@ -58,6 +99,13 @@
     justify-content: flex-end;
 }
 
+.explore-card-main-svg-wrap svg {
+    @media screen and (max-width:767px) {
+        width: 50px;
+        height: 50px;
+    }
+}
+
 .explore-content-info {
     display: flex;
     align-items: center;
@@ -83,6 +131,13 @@
     background-color: #F9F9F9;
     height: 100vh;
     max-height: 750px;
+
+    @media screen and (max-width:767px) {
+        height: auto;
+        max-height: none;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .testimonials-section-base {
@@ -94,6 +149,13 @@
 .blog-section-base {
     height: 100vh;
     max-height: 750px;
+
+    @media screen and (max-width:767px) {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        height: auto;
+        max-height: none;
+    }
 }
 
 .testimonial-card {
@@ -114,12 +176,38 @@
     align-items: flex-start;
     background-position: top right;
     background-origin: content-box;
+
+    @media screen and (max-width:767px) {
+        min-width: 300px;
+    }
+}
+
+.testimonial-card .avatar-base {
+    gap: 1rem;
+}
+
+.testimonial-card .avatar-base span {
+    font-size: 14px;
+}
+
+.testimonial-card .avatar-base .avatar-img-wrap {
+    width: 40px;
+    height: 40px;
+}
+
+.testimonial-card .avatar-base img {
+    width: 40px;
+    height: 40px;
 }
 
 .testimonial-card p {
     font-size: 18px;
     font-weight: 300;
     font-style: italic;
+
+    @media screen and (max-width:767px) {
+        font-size: 16px;
+    }
 }
 
 .testimonial-review-stars {
@@ -162,6 +250,10 @@
     box-shadow: 0 0 20px 4px #0000001A;
     padding: .6rem;
     background: #FFFFFF;
+
+    @media screen and (max-width:767px) {
+        min-width: 300px;
+    }
 }
 
 .blog-card h4 {
@@ -169,6 +261,10 @@
     font-weight: 400;
     color: #000000;
     line-height: 1.2;
+
+    @media screen and (max-width:767px) {
+        font-size: 18px;
+    }
 }
 
 .blog-card p {
@@ -177,6 +273,10 @@
     font-weight: 400;
     line-height: 1.2;
     margin-top: 1rem;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .blog-date-wrap {
@@ -232,6 +332,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media screen and (max-width:767px) {
+        font-size: 12px;
+    }
 }
 
 .blog-card-wrapper {
@@ -270,10 +374,18 @@
 
 .faq-trigger span {
     font-weight: 400;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .faq-item-base .faq-content {
     padding: 1rem;
     border-top: 1px solid #0053DC;
     color: #6B6B6B;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }

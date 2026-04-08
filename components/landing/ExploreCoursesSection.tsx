@@ -45,7 +45,7 @@ function ExploreCard({
 		<Link href={`/explore?filter=${id}`} className="explore-card-main">
 			<Image src={image} alt="explore-card-img" height={500} width={500} />
 			<div className="explore-card-content-main">
-				<div>
+				<div className="explore-card-main-svg-wrap">
 					<TechPrimaryBoxIcon />
 				</div>
 				<div className="explore-content-info">

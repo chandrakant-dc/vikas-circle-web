@@ -35,8 +35,9 @@ export default function Header() {
 			<Navbar
 				onMenuOpenChange={setIsMenuOpen}
 				classNames={{ base: "bg-white", wrapper: "main-header" }}
+				disableAnimation
 			>
-				<NavbarContent>
+				<NavbarContent className="navbar-content-base">
 					<NavbarMenuToggle
 						aria-label={isMenuOpen ? "Close menu" : "Open menu"}
 						className="sm:hidden"
@@ -77,8 +78,8 @@ export default function Header() {
 						</Link>
 					</NavbarItem>
 				</NavbarContent>
-				<NavbarContent justify="end">
-					<NavbarItem className="hidden lg:flex">
+				<NavbarContent justify="end" className="hidden sm:flex">
+					<NavbarItem>
 						<Link href="#" className="text-black" onClick={onOpenL}>
 							Login
 						</Link>
@@ -90,30 +91,48 @@ export default function Header() {
 							href="#"
 							variant="flat"
 							className="nav-cta-primary"
-							onClick={onOpen}
+							onPress={onOpen}
 						>
 							Sign Up
 						</Button>
 					</NavbarItem>
 				</NavbarContent>
-				<NavbarMenu>
-					{menuItems.map((item, index) => (
-						<NavbarMenuItem key={`${item}-${index + 1}`}>
-							<Link
-								className="w-full"
-								color={
-									index === 2
-										? "primary"
-										: index === menuItems.length - 1
-											? "danger"
-											: "foreground"
-								}
-								href="#"
-							>
-								{item}
-							</Link>
-						</NavbarMenuItem>
-					))}
+				<NavbarMenu className="bg-white">
+					<NavbarMenuItem>
+						<Link color="foreground" href="/" className={`h-10 font-medium rounded-[10px] w-fit px-4 flex items-center justify-start ${pathname === "/" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
+							Home
+						</Link>
+					</NavbarMenuItem>
+					<NavbarMenuItem>
+						<Link color="foreground" href="/explore" className={`h-10 font-medium rounded-[10px] w-fit px-4 flex items-center justify-start ${pathname.includes("/explore") ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
+							Explore
+						</Link>
+					</NavbarMenuItem>
+					<NavbarMenuItem>
+						<Link color="foreground" href="/pricing" className={`h-10 font-medium rounded-[10px] w-fit px-4 flex items-center justify-start ${pathname === "/pricing" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
+							Pricing
+						</Link>
+					</NavbarMenuItem>
+					<NavbarMenuItem>
+						<Link color="foreground" href="/contact-us" className={`h-10 font-medium rounded-[10px] w-fit px-4 flex items-center justify-start ${pathname === "/contact-us" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
+							Contact
+						</Link>
+					</NavbarMenuItem>
+					<div className="flex items-center w-full mt-auto pb-4">
+						<Link href="#" className="text-black text-center w-full" onClick={onOpenL}>
+							Login
+						</Link>
+						<Button
+							// as={Link}
+							color="primary"
+							href="#"
+							variant="flat"
+							className="nav-cta-primary w-full"
+							onPress={onOpen}
+						>
+							Sign Up
+						</Button>
+					</div>
 				</NavbarMenu>
 			</Navbar>
 			<SignUpModal

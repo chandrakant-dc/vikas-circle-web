@@ -6,12 +6,20 @@
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
+    @media screen and (max-width:767px) {
+        padding: 1rem;
+    }
 }
 
 .start-journey-base h2 {
     color: #FFFFFF;
     font-weight: bold;
     font-size: 36px;
+
+    @media screen and (max-width:767px) {
+        font-size: 22px;
+    }
 }
 
 .start-journey-base p {
@@ -19,4 +27,9 @@
     font-size: 18px;
     font-weight: 300;
     margin-bottom: 2rem;
+    text-align: center;
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }

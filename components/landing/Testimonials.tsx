@@ -46,13 +46,13 @@ function TestimonialCard({
 					src: "/user.png",
 					classNames: {
 						img: "w-[60px] h-[60px]",
-						base: "w-[60px] h-[60px]",
+						base: "w-[60px] h-[60px] avatar-img-wrap",
 					},
 				}}
 				classNames={{
 					description: "text-[16px]",
 					name: "text-[16px] font-medium",
-					base: "gap-8",
+					base: "gap-8 avatar-base",
 				}}
 				description={description}
 				name={name}
