@@ -1,6 +1,13 @@
 .plans-section-base {
     height: 100vh;
     max-height: 750px;
+
+    @media screen and (max-width:1023px) {
+        height: auto;
+        max-height: none;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
 }
 
 .pricing-card {
@@ -9,12 +16,17 @@
     box-shadow: 0 0 15px 6px #0000001A;
     width: 100%;
     max-width: 350px;
+    min-width: 234px;
     padding: 1rem;
     border-radius: 20px;
     height: 450px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media screen and (max-width:1023px) {
+        height: 348px;
+    }
 }
 
 .pricing-card.active {
@@ -42,27 +54,82 @@
     font-weight: 600;
     font-size: 36px;
     color: #000000;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 26px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 22px;
+    }
 }
 
 .pricing-card-price {
     font-weight: 600;
     font-size: 36px;
     color: #000000;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 26px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 22px;
+    }
 }
 
 .pricing-card-price sub {
     color: #6B6B6B;
     font-weight: 400;
     font-size: 20px;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .pricing-card-feat-label {
     color: #6B6B6B;
     font-size: 20px;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .pricing-card-feat {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+}
+
+.pricing-card-container {
+    padding: 2rem 0;
+    overflow: auto hidden;
+
+    &::-webkit-scrollbar {
+        background: #0000001C;
+        height: 5px;
+        border-radius: 25px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #0000001C;
+        height: 5px;
+        border-radius: 25px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-image: linear-gradient(to right, #4F29ED, #9D00FF);
+        border-radius: 25px;
+        height: 5px;
+    }
 }

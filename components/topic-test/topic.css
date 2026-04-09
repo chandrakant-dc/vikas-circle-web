@@ -1,6 +1,14 @@
 .topic-test-base {
     height: 100vh;
     max-height: 750px;
+
+    @media screen and (max-width:1023px) {
+        height: auto;
+        max-height: none;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
 }
 
 .topic-test-container {
@@ -9,6 +17,10 @@
     padding: 4rem 0;
     gap: 2rem;
     height: 100%;
+
+    @media screen and (max-width:1023px) {
+        padding: 0%;
+    }
 }
 
 .topic-test-count-container {

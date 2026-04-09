@@ -8,12 +8,26 @@
     @media screen and (max-width:1400px) {
         background-size: contain;
     }
+
+    @media screen and (max-width:767px) {
+        height: 250px;
+        max-height: none;
+        background-size: cover;
+    }
 }
 
 .contact-page-banner-content h2 {
     color: #fff;
     font-size: 48px;
     font-weight: bold;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 38px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 22px;
+    }
 }
 
 .contact-page-banner-content p {
@@ -21,6 +35,14 @@
     font-weight: 300;
     font-size: 20px;
     max-width: 485px;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .contact-us-main-section {
@@ -54,6 +76,14 @@
     -webkit-text-fill-color: transparent;
     /* For WebKit browsers */
     width: fit-content;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 38px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 22px;
+    }
 }
 
 .contact-info-card {
@@ -66,16 +96,42 @@
     width: 100%;
 }
 
+.contact-info-card svg {
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        width: 50px;
+    }
+
+    @media screen and (max-width:767px) {
+        width: 40px;
+    }
+}
+
 .contact-info-label {
     font-size: 18px;
     color: #000000;
     font-weight: 500;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .contact-info-value {
     font-size: 18px;
     color: #6B6B6B;
     font-weight: 400;
+
+    @media screen and (min-width:768px) and (max-width:1023px) {
+        font-size: 16px;
+    }
+
+    @media screen and (max-width:767px) {
+        font-size: 14px;
+    }
 }
 
 .contact-form {
@@ -89,4 +145,8 @@
     @media screen and (max-width:1023px) {
         max-width: none;
     }
+}
+
+.contact-info-content {
+    width: calc(100% - 60px);
 }

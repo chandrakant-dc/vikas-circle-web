@@ -45,13 +45,13 @@ export default function Footer() {
 									<Link href={"/"}>Home</Link>
 								</li>
 								<li>
-									<Link href={"/"}>Explore</Link>
+									<Link href={"/explore"}>Explore</Link>
 								</li>
 								<li>
-									<Link href={"/"}>Pricing</Link>
+									<Link href={"/pricing"}>Pricing</Link>
 								</li>
 								<li>
-									<Link href={"/"}>Contact us</Link>
+									<Link href={"/contact-us"}>Contact us</Link>
 								</li>
 							</ul>
 						</div>

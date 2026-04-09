@@ -31,12 +31,12 @@ export default function useExplore() {
 	}
 
 	useEffect(() => {
-		async function handleGetAllSubCategory(categoryId: string) {
+		async function handleGetAllSubCategory(categoryId?: string | null) {
 			const resp = await getAllSubCategory(categoryId);
 			setSubCategoryList(resp?.data?.data || []);
 		}
 
-		if (categoryId) handleGetAllSubCategory(categoryId);
+		handleGetAllSubCategory(categoryId);
 	}, [categoryId]);
 
 	return {
