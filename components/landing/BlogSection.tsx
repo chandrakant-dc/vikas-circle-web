@@ -1,10 +1,11 @@
 import { Divider } from "@heroui/react";
+import { blogs } from "@src/data/blogs";
 import CalenderPrimaryIcon from "@src/svg/CalenderPrimaryIcon";
 import RightArrowIcon from "@src/svg/RightArrowIcon";
 import Image from "next/image";
 import Link from "next/link";
-
 export default function BlogSection() {
+
 	return (
 		<div className="blog-section-base">
 			<div className="section-container flex flex-col justify-center">
@@ -19,13 +20,14 @@ export default function BlogSection() {
 				</div>
 				<div className="blog-card-wrapper">
 					<div className="flex items-center gap-8">
-						{list.map((item, i) => (
+						{blogs.map((item, i) => (
 							<BlogCard
 								key={`blog-card-${i + 1}`}
 								title={item?.title}
 								tag={item?.tag}
 								description={item?.description}
 								date={item?.date}
+								slug={item?.slug}
 							/>
 						))}
 					</div>
@@ -40,11 +42,13 @@ function BlogCard({
 	tag,
 	description,
 	date,
+	slug
 }: {
 	title: string;
 	tag: string;
 	description: string;
 	date: string;
+	slug: string;
 }) {
 	return (
 		<div className="blog-card">
@@ -64,12 +68,14 @@ function BlogCard({
 				<CalenderPrimaryIcon />
 				<div className="blog-date">{date}</div>
 			</div>
-			<Link href={"/"} className="cta-primary max-w-full!">
+			<Link href={`/blog/${slug}`} className="cta-primary max-w-full!">
 				Read More <RightArrowIcon />
 			</Link>
 		</div>
 	);
 }
+
+
 
 const list = [
 	{

@@ -71,39 +71,78 @@ function TestimonialCard({
 
 const list = [
 	{
-		name: "Priya Sharma",
-		description: "Software Developer",
-		review:
-			"Vikas Circle transformed my career! The structured courses and real-world projects helped me land my dream job in just 6 months.",
+		name: "Aisha",
+		description: "College Student",
+		review: `I joined Vikas Circle while preparing for my entrance exams. The practical courses in Data Analytics and Full Stack Development helped me stay ahead and confident.`,
 	},
 	{
-		name: "Rahul Kumar",
-		description: "Data Analyst",
-		review:
-			"The quality of courses is exceptional. The instructors are knowledgeable and the community support is amazing. Highly recommended!",
+		name: "Raj",
+		description: "College Student",
+		review: `The AI and Machine Learning courses gave me hands-on experience that no theory book could. It boosted my skills for both exams and projects`,
 	},
 	{
-		name: "Anjali Patel",
-		description: "Marketing Manager",
-		review:
-			"Best investment in my professional development. The courses are practical, engaging, and immediately applicable to my work.",
+		name: "Sneha",
+		description: "Exam-Prep Student",
+		review: `Vikas Circle’s structured approach helped me manage exam prep alongside learning tech skills. I feel more productive and career-ready.`,
 	},
 	{
-		name: "Priya Sharma",
-		description: "Software Developer",
-		review:
-			"Vikas Circle transformed my career! The structured courses and real-world projects helped me land my dream job in just 6 months.",
+		name: "Mr. Kapoor",
+		description: "Parent",
+		review: `As a parent, I’ve seen my child explore advanced tech and business courses without spending thousands. Vikas Circle makes premium learning accessible`,
 	},
 	{
-		name: "Rahul Kumar",
-		description: "Data Analyst",
-		review:
-			"The quality of courses is exceptional. The instructors are knowledgeable and the community support is amazing. Highly recommended!",
+		name: "Ms. Rathi",
+		description: "Institute Owner",
+		review: `I run a small coaching institute. I introduced Vikas Circle’s courses to my students, and they were engaged and motivated. The practical projects make all the difference.`,
 	},
 	{
-		name: "Anjali Patel",
-		description: "Marketing Manager",
-		review:
-			"Best investment in my professional development. The courses are practical, engaging, and immediately applicable to my work.",
+		name: "Sameer",
+		description: "College Student",
+		review: `The Business Analysis and Product Management courses helped me understand real-world applications beyond my college syllabus. It’s a great supplement for exam prep.`,
+	},
+	{
+		name: "Mrs. Mehta",
+		description: "Parent",
+		review: `Vikas Circle is helping students like my daughter explore career-oriented skills while preparing for competitive exams. The platform is flexible and practical.`,
+	},
+	{
+		name: "Nikhil",
+		description: "College Student",
+		review: `I was unsure about tech courses because I am from a commerce background, but Vikas Circle’s guidance made it simple. Now I can confidently take up DevOps and Data Analytics.`,
+	},
+	{
+		name: "Mr. Verma",
+		description: "Institute Owner",
+		review: `Our institute started recommending Vikas Circle for students preparing for finance and tech exams. The feedback has been excellent; students are more confident and skilled.`,
+	},
+	{
+		name: "Priya",
+		description: "College Student",
+		review: `The Full Stack and Cloud Computing courses helped me understand concepts quickly and apply them in projects while focusing on my university exams.`,
+	},
+	{
+		name: "Mr. Sharma",
+		description: "Parent",
+		review: `Vikas Circle provides more than learning; it guides students toward career readiness. My son learned practical skills that complement his exam prep perfectly.`,
+	},
+	{
+		name: "Ms. Joshi",
+		description: "Institute Owner",
+		review: `I have recommended Vikas Circle to students preparing for engineering and IT exams. They love the hands-on approach and the way it builds confidence.`,
+	},
+	{
+		name: "Rohan",
+		description: "College Student",
+		review: `The Data Analytics and Business Analysis courses gave me practical experience that textbooks cannot offer. It’s invaluable for exams and real-world applications.`,
+	},
+	{
+		name: "Mr. Bansal",
+		description: "Institute Owner",
+		review: `Vikas Circle allowed my students to explore premium skills for free. It’s an amazing resource that adds real value to their exam preparation.`,
+	},
+	{
+		name: "Tanya",
+		description: "Exam-Prep Student",
+		review: `I joined Vikas Circle while preparing for my competitive exams. The mix of tech and business courses helped me think critically and solve problems effectively.`,
 	},
 ];

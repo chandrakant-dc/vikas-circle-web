@@ -217,3 +217,19 @@ button {
     font-size: 14px;
   }
 }
+
+.blog-content {
+  h2 {
+    font-size: 22px;
+    margin-top: 16px;
+  }
+
+  p {
+    margin: 10px 0;
+  }
+
+  ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+}
