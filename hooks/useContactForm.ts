@@ -1,3 +1,4 @@
+import { addToast } from "@heroui/react";
 import contactSchema from "@src/schema/contact.schema";
 import { useFormik } from "formik";
 
@@ -12,7 +13,13 @@ export default function useContactForm() {
 	const formik = useFormik({
 		initialValues,
 		validationSchema: contactSchema,
-		onSubmit: () => {},
+		onSubmit: () => {
+			addToast({
+				title: "Form submitted successfully!",
+				color: "success"
+			});
+			formik.resetForm();
+		},
 	});
 
 	return {

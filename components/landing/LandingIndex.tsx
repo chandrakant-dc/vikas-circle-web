@@ -17,7 +17,7 @@ export default function LandingIndex() {
 				title="Start your learning journey today"
 				desc="Join thousands of learners who are mastering new skills and advancing their careers"
 				ctaText="Start Now"
-				ctaLink="/"
+				ctaLink="/explore"
 			/>
 		</div>
 	);

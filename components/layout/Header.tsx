@@ -62,11 +62,11 @@ export default function Header() {
 							Explore
 						</Link>
 					</NavbarItem>
-					<NavbarItem>
+					{/* <NavbarItem>
 						<Link color="foreground" href="/pricing" className={`h-10 font-medium rounded-[10px] px-4 flex items-center justify-center ${pathname === "/pricing" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
 							Pricing
 						</Link>
-					</NavbarItem>
+					</NavbarItem> */}
 					<NavbarItem>
 						<Link color="foreground" href="/contact-us" className={`h-10 font-medium rounded-[10px] px-4 flex items-center justify-center ${pathname === "/contact-us" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
 							Contact
@@ -74,7 +74,7 @@ export default function Header() {
 					</NavbarItem>
 				</NavbarContent>
 				<NavbarContent justify="end" className="hidden sm:flex">
-					<NavbarItem>
+					{/* <NavbarItem>
 						<Link href="#" className="text-black" onClick={onOpenL}>
 							Login
 						</Link>
@@ -90,7 +90,7 @@ export default function Header() {
 						>
 							Sign Up
 						</Button>
-					</NavbarItem>
+					</NavbarItem> */}
 				</NavbarContent>
 				<NavbarMenu className="bg-white">
 					<NavbarMenuItem>
@@ -103,11 +103,11 @@ export default function Header() {
 							Explore
 						</Link>
 					</NavbarMenuItem>
-					<NavbarMenuItem>
+					{/* <NavbarMenuItem>
 						<Link onClick={() => setIsMenuOpen(!isMenuOpen)} color="foreground" href="/pricing" className={`h-10 text-[14px] sm:text-[16px] tracking-wider font-medium rounded-[10px] w-fit px-4 flex items-center justify-start ${pathname === "/pricing" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
 							Pricing
 						</Link>
-					</NavbarMenuItem>
+					</NavbarMenuItem> */}
 					<NavbarMenuItem>
 						<Link onClick={() => setIsMenuOpen(!isMenuOpen)} color="foreground" href="/contact-us" className={`h-10 text-[14px] sm:text-[16px] tracking-wider font-medium rounded-[10px] w-fit px-4 flex items-center justify-start ${pathname === "/contact-us" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
 							Contact

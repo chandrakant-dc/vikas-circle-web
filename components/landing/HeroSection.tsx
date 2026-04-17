@@ -11,12 +11,12 @@ export default function HeroSection() {
 					<p className="hero-section-para1">Structured learning paths combined with</p>
 					<p> real-world projects to accelerate your career growth</p>
 					<div className="flex items-center gap-4 mt-8">
-						<Link href={"/"} className="cta-primary">
+						<Link href={"/explore"} className="cta-primary">
 							Start Learning <RightArrowIcon />
 						</Link>
-						<Link href={"/"} className="cta-default">
+						{/* <Link href={"/"} className="cta-default">
 							View Pricing <RightArrowIcon />
-						</Link>
+						</Link> */}
 					</div>
 				</div>
 			</div>

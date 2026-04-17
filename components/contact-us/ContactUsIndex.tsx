@@ -11,7 +11,7 @@ export default function ContactUsIndex() {
 				title="Ready to Start Learning?"
 				desc="Join thousands of learners on vikascircle.com and transform your career"
 				ctaText="Browse Courses"
-				ctaLink="/"
+				ctaLink="/explore"
 			/>
 		</div>
 	);

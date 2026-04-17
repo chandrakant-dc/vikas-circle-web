@@ -1,10 +1,6 @@
-import FacebookIcon from "@src/svg/FacebookIcon";
-import LinkedinIcon from "@src/svg/LinkedinIcon";
 import LocationIcon from "@src/svg/LocationIcon";
 import MailContactIcon from "@src/svg/MailContactIcon";
 import PhoneContactIcon from "@src/svg/PhoneContactIcon";
-import TwitterIcon from "@src/svg/TwitterIcon";
-import YoutubeIcon from "@src/svg/YoutubeIcon";
 import ContactUsForm from "./ContactUsForm";
 
 export default function ContactMainSection() {
@@ -43,7 +39,7 @@ export default function ContactMainSection() {
 							</div>
 						</div>
 
-						<div>
+						{/* <div>
 							<div className="contact-info-label">Stay Connected</div>
 							<div className="footer-social">
 								<a href="/" target="_blank" rel="noopener">
@@ -59,7 +55,7 @@ export default function ContactMainSection() {
 									<LinkedinIcon />
 								</a>
 							</div>
-						</div>
+						</div> */}
 					</div>
 					<ContactUsForm />
 				</div>

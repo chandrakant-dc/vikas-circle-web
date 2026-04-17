@@ -62,7 +62,7 @@ function BlogCard({
 				<div className="blog-tag">{tag}</div>
 			</div>
 			<h4>{title}</h4>
-			<p>{description}</p>
+			{/* <p>{description}</p> */}
 			<Divider className="mt-4 bg-[#9D00FF]" />
 			<div className="blog-date-wrap">
 				<CalenderPrimaryIcon />
