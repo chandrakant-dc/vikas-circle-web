@@ -1,3 +1,4 @@
+import AppProvider from "@src/context/global/AppProvider";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
@@ -34,7 +35,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={`${robotoSans.variable} antialiased`}>
-				<Providers>{children}</Providers>
+				<AppProvider>
+					<Providers>{children}</Providers>
+				</AppProvider>
 			</body>
 		</html>
 	);

@@ -31,6 +31,7 @@ export default function useSignup() {
 					title: "user registered successfully!",
 					color: "success",
 				});
+				localStorage.removeItem("guestId");
 				// const accesskey = resp.data?.token as string;
 				// Cookies.set("wtu-id", accesskey);
 				setTimeout(() => {

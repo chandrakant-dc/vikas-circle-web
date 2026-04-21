@@ -25,6 +25,7 @@ export default function useLogin() {
 				});
 				// const accesskey = resp.data?.token as string;
 				// Cookies.set("wtu-id", accesskey);
+				localStorage.removeItem("guestId");
 				setTimeout(() => {
 					window.location.reload();
 				}, 2000);

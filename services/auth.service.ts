@@ -16,7 +16,13 @@ export const forgotPassword = async (data: { email: string }) => {
     return axiosInstance.post(`/api/v1/user/forgot-password`, data);
 };
 
+export const sessionTracking = async (data: { timeSpent: number, guestId: string | undefined }) => {
+    return axiosInstance.post(`/api/session/track`, data);
+}
 
+export const getLoggedInUser = async () => {
+    return axiosInstance.get(`/api/v1/user/details`);
+}
 
 export interface LoginPayload {
     email: string,

@@ -1,5 +1,6 @@
 "use client"
 import {
+	Button,
 	Navbar,
 	NavbarBrand,
 	NavbarContent,
@@ -73,7 +74,7 @@ export default function Header() {
 					</NavbarItem>
 				</NavbarContent>
 				<NavbarContent justify="end" className="hidden sm:flex">
-					{/* <NavbarItem>
+					<NavbarItem>
 						<Link href="#" className="text-black" onClick={onOpenL}>
 							Login
 						</Link>
@@ -89,7 +90,7 @@ export default function Header() {
 						>
 							Sign Up
 						</Button>
-					</NavbarItem> */}
+					</NavbarItem>
 				</NavbarContent>
 				<NavbarMenu className="bg-white">
 					<NavbarMenuItem>
