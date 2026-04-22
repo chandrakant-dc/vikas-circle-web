@@ -113,7 +113,7 @@ export default function Header() {
 							Contact
 						</Link>
 					</NavbarMenuItem>
-					{/* <div className="flex items-center w-full mt-auto pb-4">
+					<div className="flex items-center w-full mt-auto pb-4">
 						<Link href="#" className="text-black text-center w-full" onClick={onOpenL}>
 							Login
 						</Link>
@@ -127,7 +127,7 @@ export default function Header() {
 						>
 							Sign Up
 						</Button>
-					</div> */}
+					</div>
 				</NavbarMenu>
 			</Navbar>
 			<SignUpModal
