@@ -23,4 +23,5 @@ export interface TopicQuizQuesAns {
 
 interface TopicQuizSubmitPayload {
 	answers: TopicQuizQuesAns[];
+	topicId: string;
 }

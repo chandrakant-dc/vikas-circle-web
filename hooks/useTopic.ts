@@ -33,6 +33,7 @@ export default function useTopic(subcategoryId: string) {
 export interface TopicListI {
 	_id: string;
 	topicName: string;
+	status?: "completed" | "pending";
 }
 
 export interface TopicDetailsI {
@@ -45,4 +46,6 @@ export interface TopicDetailsI {
 	image: string;
 	description: string;
 	topicCount: number;
+	completedTopics: number;
+	progressPercentage: number;
 }

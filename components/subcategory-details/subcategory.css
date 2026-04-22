@@ -241,6 +241,16 @@
     }
 }
 
+.topic-item-cta-wrap .cta-primary.completed {
+    background: #fff;
+    border: 1px solid #02BD47;
+    color: #02BD47;
+}
+
+.topic-item-cta-wrap .cta-primary.completed path {
+    fill: #02BD47;
+}
+
 .learning-topic-item.completed {
     box-shadow: 0 0 4px 1px #02BD4740;
     border: transparent;

@@ -9,8 +9,6 @@ export default function SubCateIndex({
 }: {
 	subcategoryId: string;
 }) {
-	console.log("subcategoryId", subcategoryId);
-
 	return (
 		<SubCateProvider subcategoryId={subcategoryId}>
 			<SubCateBanner />

@@ -1,7 +1,10 @@
 "use client";
 import { Progress } from "@heroui/react";
+import { SubCateContext } from "@src/context/sub-category/SubCateContext";
+import { useContext } from "react";
 
 export default function YourProgress() {
+	const { topicList, subCateDetails } = useContext(SubCateContext);
 	return (
 		<div className="py-8">
 			<div className="section-container ">
@@ -18,10 +21,13 @@ export default function YourProgress() {
 						radius="sm"
 						showValueLabel={true}
 						size="sm"
-						value={0}
+						value={subCateDetails?.progressPercentage || 0}
 					/>
 					<div className="your-progress-info">
-						<div className="your-progress-text">0 of 50 topics completed</div>
+						<div className="your-progress-text">
+							{subCateDetails?.completedTopics || 0} of {topicList?.length}{" "}
+							topics completed
+						</div>
 						<div className="your-progress-text-dot"></div>
 						<div className="your-progress-text">Keep going!</div>
 					</div>

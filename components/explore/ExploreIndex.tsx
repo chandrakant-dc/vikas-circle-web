@@ -29,6 +29,7 @@ export default function ExploreIndex() {
 								name={item?.name}
 								image={item?.image}
 								description={item?.description}
+								overallPercentage={item?.overallPercentage}
 								categoryName={item?.category?.name}
 								topicCount={item?.topicCount}
 							/>

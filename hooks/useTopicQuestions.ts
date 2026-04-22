@@ -22,6 +22,7 @@ export default function useTopicQuestions(topicId: string) {
 	async function handleSubmitQuiz(data: TopicQuizQuesAns[]) {
 		const payload = {
 			answers: data,
+			topicId,
 		};
 		const resp = await topicQuizSubmit(payload);
 		setTopicQuizResult(resp?.data?.data || null);

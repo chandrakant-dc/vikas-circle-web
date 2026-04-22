@@ -14,6 +14,7 @@ export default function ExploreCard({
 	image,
 	description,
 	topicCount,
+	overallPercentage,
 }: ExploreCardProp) {
 	return (
 		<div className="explore-card">
@@ -48,7 +49,7 @@ export default function ExploreCard({
 					radius="sm"
 					showValueLabel={true}
 					size="sm"
-					value={0}
+					value={overallPercentage}
 				/>
 				<Link href={`/explore/${id}`} className="cta-primary max-w-full!">
 					View More <RightArrowIcon />
@@ -65,4 +66,5 @@ interface ExploreCardProp {
 	categoryName: string;
 	description: string;
 	topicCount: number;
+	overallPercentage: number;
 }

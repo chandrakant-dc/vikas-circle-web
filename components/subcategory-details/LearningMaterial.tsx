@@ -2,18 +2,22 @@
 import { SubCateContext } from "@src/context/sub-category/SubCateContext";
 import RightArrowIcon from "@src/svg/RightArrowIcon";
 import TopicPrimaryIcon from "@src/svg/TopicPrimaryIcon";
+import TopicSuccessIcon from "@src/svg/TopicSuccessIcon";
 import Link from "next/link";
 import { useContext } from "react";
 
 export default function LearningMaterial() {
-	const { topicList } = useContext(SubCateContext);
+	const { topicList, subCateDetails } = useContext(SubCateContext);
 
 	return (
 		<div className="bg-[#F9F9F9] py-8">
 			<div className="section-container">
 				<div className="section-header-container mb-8">
 					<h2 className="max-w-135">Learning Material</h2>
-					<p>Complete all {topicList.length} topics to master DevOps</p>
+					<p>
+						Complete all {topicList.length} topics to master{" "}
+						{subCateDetails?.name}
+					</p>
 				</div>
 
 				{/* <div className="learning-topic-item completed">
@@ -35,19 +39,31 @@ export default function LearningMaterial() {
 				</div> */}
 
 				{topicList.map((item, i) => (
-					<div className="learning-topic-item" key={`topic-${i + 1}`}>
+					<div
+						className={`learning-topic-item ${item?.status === "completed" ? "completed" : "pending"}`}
+						key={`topic-${i + 1}`}
+					>
 						<div className="topic-item-info-wrap">
-							<TopicPrimaryIcon />
+							{item?.status === "completed" ? (
+								<TopicSuccessIcon />
+							) : (
+								<TopicPrimaryIcon />
+							)}
 							<div className="topic-item-info">
 								<div className="topic-item-info-stats">
 									<span className="topic-item-count">Topic {i + 1}</span>
-									<span className="topic-item-status">Pending</span>
+									<span className="topic-item-status">
+										{item?.status || "Pending"}
+									</span>
 								</div>
 								<div className="topic-item-name">{item?.topicName}</div>
 							</div>
 						</div>
 						<div className="topic-item-cta-wrap">
-							<Link href={`/topic/${item?._id}`} className="cta-primary h-10!">
+							<Link
+								href={`/topic/${item?._id}`}
+								className={`cta-primary h-10! ${item?.status === "completed" ? " completed" : ""}`}
+							>
 								Learn Now <RightArrowIcon />
 							</Link>
 						</div>

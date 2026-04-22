@@ -56,4 +56,5 @@ export interface SubCategoryListI {
 	image: string;
 	description: string;
 	topicCount: number;
+	overallPercentage: number;
 }
