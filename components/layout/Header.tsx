@@ -80,11 +80,11 @@ export default function Header() {
 							Explore
 						</Link>
 					</NavbarItem>
-					{/* <NavbarItem>
+					<NavbarItem>
 						<Link color="foreground" href="/pricing" className={`h-10 font-medium rounded-[10px] px-4 flex items-center justify-center ${pathname === "/pricing" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
 							Pricing
 						</Link>
-					</NavbarItem> */}
+					</NavbarItem>
 					<NavbarItem>
 						<Link
 							color="foreground"
@@ -141,11 +141,11 @@ export default function Header() {
 							Explore
 						</Link>
 					</NavbarMenuItem>
-					{/* <NavbarMenuItem>
+					<NavbarMenuItem>
 						<Link onClick={() => setIsMenuOpen(!isMenuOpen)} color="foreground" href="/pricing" className={`h-10 text-[14px] sm:text-[16px] tracking-wider font-medium rounded-[10px] w-fit px-4 flex items-center justify-start ${pathname === "/pricing" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
 							Pricing
 						</Link>
-					</NavbarMenuItem> */}
+					</NavbarMenuItem>
 					<NavbarMenuItem>
 						<Link
 							onClick={() => setIsMenuOpen(!isMenuOpen)}

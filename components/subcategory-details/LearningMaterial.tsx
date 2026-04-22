@@ -62,6 +62,7 @@ export default function LearningMaterial() {
 						<div className="topic-item-cta-wrap">
 							<Link
 								href={`/topic/${item?._id}`}
+								target="_blank"
 								className={`cta-primary h-10! ${item?.status === "completed" ? " completed" : ""}`}
 							>
 								Learn Now <RightArrowIcon />

@@ -10,7 +10,7 @@ export default function ResultModal({ isOpen, onOpenChange }: ResultModalProp) {
 	const { topicQuizResult } = useContext(TopicTestContext);
 	const navigate = useRouter();
 	const handleRedirect = () => {
-		navigate.push("/");
+		navigate.back();
 	};
 	return (
 		<Modal
@@ -95,9 +95,9 @@ export default function ResultModal({ isOpen, onOpenChange }: ResultModalProp) {
 								{/* <img src="/dashboard/result-modal.svg" alt="image" className="result-score-card-img" /> */}
 							</div>
 							{/* Bottom */}
-							{/* <div className="w-full flex justify-center items-center">
-                                <button type="button" onClick={handleRedirectToTopicDetails} className="disabled:bg-gray-500 disabled:cursor-not-allowed bg-primary text-white py-[16px] px-[24px] text-[16px] w-[250px] h-[54px] rounded-[16px]">Keep Leaning</button>
-                            </div> */}
+							<div className="w-full flex justify-center items-center">
+								<button type="button" onClick={handleRedirect} className="cta-primary">Keep Leaning</button>
+							</div>
 							<div className="w-full px-4 score-breakdown">
 								<div className="font-medium text-[#727272] md:text-[18px] text-[14px]">
 									Scores Calculation:
@@ -111,9 +111,9 @@ export default function ResultModal({ isOpen, onOpenChange }: ResultModalProp) {
 									{topicQuizResult?.correct} ={" "}
 									{topicQuizResult !== null
 										? formatNumber(
-												topicQuizResult?.maxMarkPerQuestion *
-													topicQuizResult?.correct,
-											)
+											topicQuizResult?.maxMarkPerQuestion *
+											topicQuizResult?.correct,
+										)
 										: "--"}{" "}
 									marks
 								</div>
@@ -127,9 +127,9 @@ export default function ResultModal({ isOpen, onOpenChange }: ResultModalProp) {
 									={" "}
 									{topicQuizResult !== null
 										? formatNumber(
-												topicQuizResult?.negativeMarking *
-													topicQuizResult?.wrong,
-											)
+											topicQuizResult?.negativeMarking *
+											topicQuizResult?.wrong,
+										)
 										: "--"}{" "}
 									marks
 								</div>

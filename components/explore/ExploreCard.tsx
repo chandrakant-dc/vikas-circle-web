@@ -51,7 +51,7 @@ export default function ExploreCard({
 					size="sm"
 					value={overallPercentage}
 				/>
-				<Link href={`/explore/${id}`} className="cta-primary max-w-full!">
+				<Link href={`/explore/${id}`} target="_blank" className="cta-primary max-w-full!">
 					View More <RightArrowIcon />
 				</Link>
 			</div>

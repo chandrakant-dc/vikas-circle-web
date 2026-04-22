@@ -56,9 +56,9 @@ export default function Footer() {
 										Explore
 									</Link>
 								</li>
-								{/* <li>
+								<li>
 									<Link href={"/pricing"}>Pricing</Link>
-								</li> */}
+								</li>
 								<li>
 									<Link
 										href={"/contact-us"}
