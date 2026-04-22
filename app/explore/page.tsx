@@ -3,7 +3,9 @@ import Loading from "@src/ui/Loading";
 import { Suspense } from "react";
 
 export default function ExplorePage() {
-	return <Suspense fallback={<Loading />}>
-		<ExploreMain />
-	</Suspense>
+	return (
+		<Suspense fallback={<Loading />}>
+			<ExploreMain />
+		</Suspense>
+	);
 }

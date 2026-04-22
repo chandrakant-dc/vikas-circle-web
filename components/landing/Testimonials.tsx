@@ -35,7 +35,7 @@ function TestimonialCard({
 	name,
 	description,
 	review,
-	url
+	url,
 }: {
 	name: string;
 	description: string;

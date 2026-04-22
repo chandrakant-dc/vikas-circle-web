@@ -16,7 +16,7 @@ export default function useContactForm() {
 		onSubmit: () => {
 			addToast({
 				title: "Form submitted successfully!",
-				color: "success"
+				color: "success",
 			});
 			formik.resetForm();
 		},

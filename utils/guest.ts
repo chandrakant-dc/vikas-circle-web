@@ -1,10 +1,10 @@
 export const getGuestId = () => {
-    let id = localStorage.getItem("guestId");
+	let id = localStorage.getItem("guestId");
 
-    if (!id) {
-        id = crypto.randomUUID();
-        localStorage.setItem("guestId", id);
-    }
+	if (!id) {
+		id = crypto.randomUUID();
+		localStorage.setItem("guestId", id);
+	}
 
-    return id;
+	return id;
 };

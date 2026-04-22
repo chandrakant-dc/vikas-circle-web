@@ -24,7 +24,7 @@ export default function useSignup() {
 					fullName: val?.fullName,
 					mobile: val?.mobile,
 					email: val?.email,
-					password: val?.password
+					password: val?.password,
 				};
 				await userSignup(data);
 				addToast({

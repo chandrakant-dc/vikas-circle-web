@@ -69,12 +69,13 @@ export default function TopicTestSection() {
 												type="button"
 												key={`question-${i + 1}`}
 												onClick={() => goToQuestion(i)}
-												className={`question-count w-[37px] h-[37px] rounded-full flex justify-center items-center text-white text-[14px]  ${item.selectedOption
-													? "bg-[#259800]"
-													: item.isMarkedForReview
-														? "bg-[#4f29ed]"
-														: "bg-[#54545480]"
-													} `}
+												className={`question-count w-[37px] h-[37px] rounded-full flex justify-center items-center text-white text-[14px]  ${
+													item.selectedOption
+														? "bg-[#259800]"
+														: item.isMarkedForReview
+															? "bg-[#4f29ed]"
+															: "bg-[#54545480]"
+												} `}
 											>
 												{i + 1}
 											</button>
@@ -109,10 +110,11 @@ export default function TopicTestSection() {
 										<button
 											type="button"
 											onClick={() => selectOption(opt)}
-											className={`w-12 h-12 rounded-full border cursor-pointer ${currentQuestion?.tempSelectedOption === opt
-												? "bg-[#2598001A] border-[#259800] flex items-center justify-center"
-												: "bg-white border-[#54545480]"
-												}`}
+											className={`w-12 h-12 rounded-full border cursor-pointer ${
+												currentQuestion?.tempSelectedOption === opt
+													? "bg-[#2598001A] border-[#259800] flex items-center justify-center"
+													: "bg-white border-[#54545480]"
+											}`}
 										>
 											{currentQuestion?.tempSelectedOption === opt ? (
 												<GreenTickIcon />
@@ -206,12 +208,13 @@ export default function TopicTestSection() {
 										key={`count-${i + 1}`}
 										onClick={() => goToQuestion(i)}
 										className={` 
-                                            ${item.selectedOption
-												? "bg-[#259800]"
-												: item.isMarkedForReview
-													? "bg-[#4f29ed]"
-													: "bg-[#54545480]"
-											}  w-9.25 h-9.25 rounded-full text-white flex items-center justify-center`}
+                                            ${
+																							item.selectedOption
+																								? "bg-[#259800]"
+																								: item.isMarkedForReview
+																									? "bg-[#4f29ed]"
+																									: "bg-[#54545480]"
+																						}  w-9.25 h-9.25 rounded-full text-white flex items-center justify-center`}
 									>
 										{i + 1}
 									</button>

@@ -5,7 +5,9 @@ export const getAllCategory = async () => {
 };
 
 export const getAllSubCategory = async (categoryId?: string | null) => {
-	const path = categoryId ? `/api/v1/subcategory/all?categoryId=${categoryId}` : `/api/v1/subcategory/all`;
+	const path = categoryId
+		? `/api/v1/subcategory/all?categoryId=${categoryId}`
+		: `/api/v1/subcategory/all`;
 	return axiosInstance.get(path);
 };
 

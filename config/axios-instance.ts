@@ -12,7 +12,7 @@ const axiosInstance = axios.create({
 		"Access-Control-Allow-Origin": "*",
 		"ngrok-skip-browser-warning": "true",
 	},
-	withCredentials: true
+	withCredentials: true,
 });
 
 axiosInstance.interceptors.request.use(

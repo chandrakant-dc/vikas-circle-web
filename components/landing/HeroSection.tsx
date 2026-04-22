@@ -8,7 +8,9 @@ export default function HeroSection() {
 				<div className="hero-section-content-wrapper">
 					<h1>Learn Skills</h1>
 					<h2>That Actually Get You Hired</h2>
-					<p className="hero-section-para1">Structured learning paths combined with</p>
+					<p className="hero-section-para1">
+						Structured learning paths combined with
+					</p>
 					<p> real-world projects to accelerate your career growth</p>
 					<div className="flex items-center gap-4 mt-8">
 						<Link href={"/explore"} className="cta-primary">

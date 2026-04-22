@@ -1,13 +1,10 @@
-
 import BlogContent from "@src/components/blog/BlogContent";
 export default async function BlogPage({
-    params,
+	params,
 }: {
-    params: Promise<{ slug: string }>
+	params: Promise<{ slug: string }>;
 }) {
-    const { slug } = await params;
+	const { slug } = await params;
 
-    return (
-        <BlogContent slug={slug} />
-    );
+	return <BlogContent slug={slug} />;
 }

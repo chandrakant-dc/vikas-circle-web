@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -41,16 +41,31 @@ export default function Footer() {
 							<h4 className="footer-title">Quick Links</h4>
 							<ul>
 								<li>
-									<Link href={"/"} className={`${pathname === "/" ? "underline underline-offset-4" : ""}`}>Home</Link>
+									<Link
+										href={"/"}
+										className={`${pathname === "/" ? "underline underline-offset-4" : ""}`}
+									>
+										Home
+									</Link>
 								</li>
 								<li>
-									<Link href={"/explore"} className={`${pathname.includes("/explore") ? "underline underline-offset-4" : ""}`}>Explore</Link>
+									<Link
+										href={"/explore"}
+										className={`${pathname.includes("/explore") ? "underline underline-offset-4" : ""}`}
+									>
+										Explore
+									</Link>
 								</li>
 								{/* <li>
 									<Link href={"/pricing"}>Pricing</Link>
 								</li> */}
 								<li>
-									<Link href={"/contact-us"} className={`${pathname === "/contact-us" ? "underline underline-offset-4" : ""}`}>Contact us</Link>
+									<Link
+										href={"/contact-us"}
+										className={`${pathname === "/contact-us" ? "underline underline-offset-4" : ""}`}
+									>
+										Contact us
+									</Link>
 								</li>
 							</ul>
 						</div>
@@ -58,10 +73,14 @@ export default function Footer() {
 							<h4 className="footer-title">Legal</h4>
 							<ul>
 								<li>
-									<Link target="_blank" href={"/privacy-policy"}>Privacy Policy</Link>
+									<Link target="_blank" href={"/privacy-policy"}>
+										Privacy Policy
+									</Link>
 								</li>
 								<li>
-									<Link target="_blank" href={"/terms-conditions"}>Terms & Conditions</Link>
+									<Link target="_blank" href={"/terms-conditions"}>
+										Terms & Conditions
+									</Link>
 								</li>
 							</ul>
 						</div>

@@ -1,11 +1,12 @@
 export const blogs = [
-    {
-        slug: "free-premium-courses-level-playing-field-students",
-        tag: "Tech & IT",
-        date: "Jan 20, 2026",
-        description: "Education and skill-building have always been keys to success. But in today’s world, high-quality learning often comes at a cost. Many students cannot afford expensive courses, leaving them at a disadvantage compared to peers who have access to premium learning resources. Vikas Circle is here to change that. Our mission is simple: provide structured, high-quality learning to all students, no matter their financial background.",
-        title: "How Free Premium Courses Can Level the Playing Field for Students",
-        content: `<p>Education and skill-building have always been keys to success. But in today’s world, high-quality learning often comes at a cost. Many students cannot afford expensive courses, leaving them at a disadvantage compared to peers who have access to premium learning resources. Vikas Circle is here to change that. Our mission is simple: provide structured, high-quality learning to all students, no matter their financial background.</p>
+	{
+		slug: "free-premium-courses-level-playing-field-students",
+		tag: "Tech & IT",
+		date: "Jan 20, 2026",
+		description:
+			"Education and skill-building have always been keys to success. But in today’s world, high-quality learning often comes at a cost. Many students cannot afford expensive courses, leaving them at a disadvantage compared to peers who have access to premium learning resources. Vikas Circle is here to change that. Our mission is simple: provide structured, high-quality learning to all students, no matter their financial background.",
+		title: "How Free Premium Courses Can Level the Playing Field for Students",
+		content: `<p>Education and skill-building have always been keys to success. But in today’s world, high-quality learning often comes at a cost. Many students cannot afford expensive courses, leaving them at a disadvantage compared to peers who have access to premium learning resources. Vikas Circle is here to change that. Our mission is simple: provide structured, high-quality learning to all students, no matter their financial background.</p>
 
 <h2>Structured Learning Makes a Difference</h2>
 <p>Randomly browsing tutorials or videos online can be overwhelming. Students may struggle to find the right resources or spend hours on content that is scattered and incomplete. Free premium courses, carefully designed by experts, solve this problem. They guide students step-by-step, ensuring learning is effective, practical, and actionable.</p>
@@ -23,14 +24,16 @@ export const blogs = [
 <p>Education should empower, not divide. Free premium courses can level the playing field for students, helping every learner acquire skills, gain confidence, and become competitive in today’s world.</p>
 
 <p>Explore the courses today on Vikas Circle or email us your thoughts at [your email].</p>`,
-    },
-    {
-        slug: "top-5-skills-students-should-learn-2026",
-        tag: "Tech & IT",
-        date: "Jan 20, 2026",
-        description: "The job market is evolving faster than ever. New technologies, digital tools, and business models are shaping careers in every industry. For students, staying ahead means learning the right skills early. At Vikas Circle, we believe every student should have access to high-quality learning to stay competitive and job-ready. Here are the top five skills students should focus on in 2026.",
-        title: "Top 5 Skills Students Should Learn in 2026 to Boost Career Opportunities",
-        content: `<p>The job market is evolving faster than ever. New technologies, digital tools, and business models are shaping careers in every industry. For students, staying ahead means learning the right skills early. At Vikas Circle, we believe every student should have access to high-quality learning to stay competitive and job-ready. Here are the top five skills students should focus on in 2026.</p>
+	},
+	{
+		slug: "top-5-skills-students-should-learn-2026",
+		tag: "Tech & IT",
+		date: "Jan 20, 2026",
+		description:
+			"The job market is evolving faster than ever. New technologies, digital tools, and business models are shaping careers in every industry. For students, staying ahead means learning the right skills early. At Vikas Circle, we believe every student should have access to high-quality learning to stay competitive and job-ready. Here are the top five skills students should focus on in 2026.",
+		title:
+			"Top 5 Skills Students Should Learn in 2026 to Boost Career Opportunities",
+		content: `<p>The job market is evolving faster than ever. New technologies, digital tools, and business models are shaping careers in every industry. For students, staying ahead means learning the right skills early. At Vikas Circle, we believe every student should have access to high-quality learning to stay competitive and job-ready. Here are the top five skills students should focus on in 2026.</p>
 
 <h2>1. Tech and IT Skills</h2>
 <p>Technology continues to drive innovation across industries. Skills like Frontend and Backend Development, Full Stack Development, DevOps, AI, Machine Learning, Cloud Computing, and Cybersecurity are highly in demand. Learning these skills early will open doors to exciting roles in tech companies, startups, and remote opportunities.</p>
@@ -49,14 +52,15 @@ export const blogs = [
 
 <h2>Take the First Step</h2>
 <p>The right skills can make all the difference in building a successful career. Vikas Circle provides free premium courses across all these areas to help students learn effectively while staying focused on their studies.</p>`,
-    },
-    {
-        slug: "top-5-free-courses-vikas-circle-start-learning",
-        tag: "Tech & IT",
-        date: "Jan 20, 2026",
-        description: "Learning the right skills early can make a huge difference in your career. Vikas Circle provides free premium courses that help students gain practical knowledge, stay competitive, and explore opportunities in tech, business, and data. Here are the top 5 courses you should start with today and why they matter.",
-        title: "Top 5 Free Courses on Vikas Circle to Start Learning Today",
-        content: `<p>Learning the right skills early can make a huge difference in your career. Vikas Circle provides free premium courses that help students gain practical knowledge, stay competitive, and explore opportunities in tech, business, and data. Here are the top 5 courses you should start with today and why they matter.</p>
+	},
+	{
+		slug: "top-5-free-courses-vikas-circle-start-learning",
+		tag: "Tech & IT",
+		date: "Jan 20, 2026",
+		description:
+			"Learning the right skills early can make a huge difference in your career. Vikas Circle provides free premium courses that help students gain practical knowledge, stay competitive, and explore opportunities in tech, business, and data. Here are the top 5 courses you should start with today and why they matter.",
+		title: "Top 5 Free Courses on Vikas Circle to Start Learning Today",
+		content: `<p>Learning the right skills early can make a huge difference in your career. Vikas Circle provides free premium courses that help students gain practical knowledge, stay competitive, and explore opportunities in tech, business, and data. Here are the top 5 courses you should start with today and why they matter.</p>
 
 <h2>1. DevOps</h2>
 <p>DevOps is one of the fastest-growing areas in tech. This course teaches students how to combine development and operations to deliver software faster and more reliably. Learning DevOps helps you work on real-world projects, improves collaboration skills, and makes you highly attractive to tech companies.</p>
@@ -76,15 +80,17 @@ export const blogs = [
 <h2>Why Start Today</h2>
 <p>These courses are carefully curated to help students gain in-demand skills while keeping learning free and flexible. By focusing on DevOps, Data, and Business, you can build both technical expertise and strategic thinking—skills employers are actively seeking.</p>
 
-<p>Explore the courses today on Vikas Circle or email us your thoughts at [your email]. Start learning, stay ahead, and prepare for the career you want.</p>`
-    },
-    {
-        slug: "non-tech-students-learning-tech-skills-vikas-circle",
-        tag: "Tech & IT",
-        date: "Jan 20, 2026",
-        description: "Many students believe that tech courses are only for computer science or engineering backgrounds. But in today’s world, technology skills are valuable for everyone, from business to design, finance, and marketing. Vikas Circle is designed to make tech learning accessible, practical, and effective for students of all backgrounds.",
-        title: "How Non-Tech Students Can Start Learning Tech Skills on Vikas Circle",
-        content: `<p>Many students believe that tech courses are only for computer science or engineering backgrounds. But in today’s world, technology skills are valuable for everyone, from business to design, finance, and marketing. Vikas Circle is designed to make tech learning accessible, practical, and effective for students of all backgrounds.</p>
+<p>Explore the courses today on Vikas Circle or email us your thoughts at [your email]. Start learning, stay ahead, and prepare for the career you want.</p>`,
+	},
+	{
+		slug: "non-tech-students-learning-tech-skills-vikas-circle",
+		tag: "Tech & IT",
+		date: "Jan 20, 2026",
+		description:
+			"Many students believe that tech courses are only for computer science or engineering backgrounds. But in today’s world, technology skills are valuable for everyone, from business to design, finance, and marketing. Vikas Circle is designed to make tech learning accessible, practical, and effective for students of all backgrounds.",
+		title:
+			"How Non-Tech Students Can Start Learning Tech Skills on Vikas Circle",
+		content: `<p>Many students believe that tech courses are only for computer science or engineering backgrounds. But in today’s world, technology skills are valuable for everyone, from business to design, finance, and marketing. Vikas Circle is designed to make tech learning accessible, practical, and effective for students of all backgrounds.</p>
 
 <h2>Why Non-Tech Students Should Learn Tech Skills</h2>
 <p>Even if you come from a non-technical field, understanding tech concepts like DevOps, Full Stack Development, Data Analysis, or Cloud Computing can:</p>
@@ -107,15 +113,16 @@ export const blogs = [
 <h2>Take the First Step</h2>
 <p>Tech learning is no longer limited to technical students. With structured courses, practical projects, and step-by-step guidance, Vikas Circle makes it possible for every student to gain tech skills and become job-ready.</p>
 
-<p>Explore the courses today on Vikas Circle or email us your thoughts at [your email]. Start learning, experimenting, and expanding your career options today.</p>`
-    },
-    {
-        slug: "which-tech-course-students-should-take-first",
-        tag: "Tech & IT",
-        date: "Jan 20, 2026",
-        description: "Choosing your first tech course can feel overwhelming. With so many options like DevOps, Frontend, Backend, Full Stack, AI, or Cloud Computing, students often wonder which path is best for them. At Vikas Circle, we don’t just provide courses—we guide students step-by-step, helping them make smart choices aligned with their interests and career goals.",
-        title: "Which Tech Course Should Students Take First and Why",
-        content: `<p>Choosing your first tech course can feel overwhelming. With so many options like DevOps, Frontend, Backend, Full Stack, AI, or Cloud Computing, students often wonder which path is best for them. At Vikas Circle, we don’t just provide courses—we guide students step-by-step, helping them make smart choices aligned with their interests and career goals.</p>
+<p>Explore the courses today on Vikas Circle or email us your thoughts at [your email]. Start learning, experimenting, and expanding your career options today.</p>`,
+	},
+	{
+		slug: "which-tech-course-students-should-take-first",
+		tag: "Tech & IT",
+		date: "Jan 20, 2026",
+		description:
+			"Choosing your first tech course can feel overwhelming. With so many options like DevOps, Frontend, Backend, Full Stack, AI, or Cloud Computing, students often wonder which path is best for them. At Vikas Circle, we don’t just provide courses—we guide students step-by-step, helping them make smart choices aligned with their interests and career goals.",
+		title: "Which Tech Course Should Students Take First and Why",
+		content: `<p>Choosing your first tech course can feel overwhelming. With so many options like DevOps, Frontend, Backend, Full Stack, AI, or Cloud Computing, students often wonder which path is best for them. At Vikas Circle, we don’t just provide courses—we guide students step-by-step, helping them make smart choices aligned with their interests and career goals.</p>
 
 <h2>Understanding Your Interests</h2>
 <p>Before starting any course, it’s important to know where your interest lies:</p>
@@ -145,6 +152,6 @@ export const blogs = [
 <h2>Take the First Step</h2>
 <p>Choosing the right course is the first step toward a successful tech career. With Vikas Circle, students get structured learning, expert guidance, and practical experience, ensuring they don’t just learn, but grow and stay job-ready.</p>
 
-<p>Explore the tech courses today on Vikas Circle or email us your thoughts at [your email]. Let us guide you toward the career path that suits you best.</p>`
-    }
+<p>Explore the tech courses today on Vikas Circle or email us your thoughts at [your email]. Let us guide you toward the career path that suits you best.</p>`,
+	},
 ];

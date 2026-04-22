@@ -5,7 +5,6 @@ import RightArrowIcon from "@src/svg/RightArrowIcon";
 import Image from "next/image";
 import Link from "next/link";
 export default function BlogSection() {
-
 	return (
 		<div className="blog-section-base">
 			<div className="section-container flex flex-col justify-center">
@@ -25,7 +24,7 @@ export default function BlogSection() {
 								key={`blog-card-${i + 1}`}
 								title={item?.title}
 								tag={item?.tag}
-								description={item?.description}
+								// description={item?.description}
 								date={item?.date}
 								slug={item?.slug}
 							/>
@@ -40,13 +39,13 @@ export default function BlogSection() {
 function BlogCard({
 	title,
 	tag,
-	description,
+	// description,
 	date,
-	slug
+	slug,
 }: {
 	title: string;
 	tag: string;
-	description: string;
+	// description: string;
 	date: string;
 	slug: string;
 }) {
@@ -75,49 +74,47 @@ function BlogCard({
 	);
 }
 
-
-
-const list = [
-	{
-		tag: "Tech & IT",
-		title: "The 2026 DevOps Roadmap: From Beginner to Pro",
-		description:
-			"Discover the must-learn tools and certifications to land a high-paying DevOps role this year.",
-		date: "Jan 20, 2026",
-	},
-	{
-		tag: "Data & Analytics",
-		title: "The Ethics of Data: How to Handle Privacy in the AI Era",
-		description:
-			"With great data comes great responsibility. A simple guide to understanding GDPR, data poisoning, & ethical AI for beginners.",
-		date: "Mar 15, 2026",
-	},
-	{
-		tag: "Personal Development",
-		title: "Habit Stacking: The Secret to Learning 2x Faster",
-		description:
-			"Struggling to find time to study? Learn how to 'stack' new learning habits onto your daily routine for consistent, growth.",
-		date: "Feb 10, 2026",
-	},
-	{
-		tag: "Tech & IT",
-		title: "The 2026 DevOps Roadmap: From Beginner to Pro",
-		description:
-			"Discover the must-learn tools and certifications to land a high-paying DevOps role this year.",
-		date: "Jan 20, 2026",
-	},
-	{
-		tag: "Data & Analytics",
-		title: "The Ethics of Data: How to Handle Privacy in the AI Era",
-		description:
-			"With great data comes great responsibility. A simple guide to understanding GDPR, data poisoning, & ethical AI for beginners.",
-		date: "Mar 15, 2026",
-	},
-	{
-		tag: "Personal Development",
-		title: "Habit Stacking: The Secret to Learning 2x Faster",
-		description:
-			"Struggling to find time to study? Learn how to 'stack' new learning habits onto your daily routine for consistent, growth.",
-		date: "Feb 10, 2026",
-	},
-];
+// const list = [
+// 	{
+// 		tag: "Tech & IT",
+// 		title: "The 2026 DevOps Roadmap: From Beginner to Pro",
+// 		description:
+// 			"Discover the must-learn tools and certifications to land a high-paying DevOps role this year.",
+// 		date: "Jan 20, 2026",
+// 	},
+// 	{
+// 		tag: "Data & Analytics",
+// 		title: "The Ethics of Data: How to Handle Privacy in the AI Era",
+// 		description:
+// 			"With great data comes great responsibility. A simple guide to understanding GDPR, data poisoning, & ethical AI for beginners.",
+// 		date: "Mar 15, 2026",
+// 	},
+// 	{
+// 		tag: "Personal Development",
+// 		title: "Habit Stacking: The Secret to Learning 2x Faster",
+// 		description:
+// 			"Struggling to find time to study? Learn how to 'stack' new learning habits onto your daily routine for consistent, growth.",
+// 		date: "Feb 10, 2026",
+// 	},
+// 	{
+// 		tag: "Tech & IT",
+// 		title: "The 2026 DevOps Roadmap: From Beginner to Pro",
+// 		description:
+// 			"Discover the must-learn tools and certifications to land a high-paying DevOps role this year.",
+// 		date: "Jan 20, 2026",
+// 	},
+// 	{
+// 		tag: "Data & Analytics",
+// 		title: "The Ethics of Data: How to Handle Privacy in the AI Era",
+// 		description:
+// 			"With great data comes great responsibility. A simple guide to understanding GDPR, data poisoning, & ethical AI for beginners.",
+// 		date: "Mar 15, 2026",
+// 	},
+// 	{
+// 		tag: "Personal Development",
+// 		title: "Habit Stacking: The Secret to Learning 2x Faster",
+// 		description:
+// 			"Struggling to find time to study? Learn how to 'stack' new learning habits onto your daily routine for consistent, growth.",
+// 		date: "Feb 10, 2026",
+// 	},
+// ];
