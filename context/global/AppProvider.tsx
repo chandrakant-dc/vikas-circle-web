@@ -7,11 +7,12 @@ export default function AppProvider({
 }: {
 	children: React.ReactNode;
 }) {
-	const { userDetails } = useUserDetails();
+	const { userDetails, isLoadingUserDetails } = useUserDetails();
 	return (
 		<AppContext.Provider
 			value={{
 				userDetails,
+				isLoadingUserDetails
 			}}
 		>
 			{children}

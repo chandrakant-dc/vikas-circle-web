@@ -11,3 +11,7 @@ export const buyPlan = async (formData: FormData) => {
         }
     });
 };
+
+export const subscriptionDetails = async () => {
+    return axiosInstance.get(`/api/v1/user-subscription/details`)
+}

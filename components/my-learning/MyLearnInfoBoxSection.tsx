@@ -1,15 +1,15 @@
 import { Divider } from "@heroui/react";
-import { AppContext } from "@src/context/global/AppContext";
+import useSubscription from "@src/hooks/useSubscription";
 import LearningBookIcon from "@src/svg/LearningBookIcon";
 import LearningClockIcon from "@src/svg/LearningClockIcon";
 import LearningCrownIcon from "@src/svg/LearningCrownIcon";
 import PlanPendingIcon from "@src/svg/PlanPendingIcon";
 import RightArrowIcon from "@src/svg/RightArrowIcon";
 import Link from "next/link";
-import { useContext } from "react";
 
 export default function MyLearnInfoBoxSection() {
-    const { userDetails } = useContext(AppContext);
+    // const { userDetails } = useContext(AppContext);
+    const { userSubscriptionDetails } = useSubscription();
     return (
         <div className="section-container py-12!">
             <div className="my-learning-box-container">
@@ -29,7 +29,11 @@ export default function MyLearnInfoBoxSection() {
                     </div>
                 </div>
                 <div className="my-learning-info-box premium">
-                    <PlanCard type={userDetails?.subscription === "pending" ? "pending" : userDetails?.subscription === "activated" ? "activated" : "buy"} />
+                    <PlanCard
+                        type={userSubscriptionDetails?.subscription === "pending" ? "pending" : userSubscriptionDetails?.subscription === "activated" ? "activated" : "buy"}
+                        startDate={userSubscriptionDetails?.subscriptionStartDate || "NA"}
+                        endDate={userSubscriptionDetails?.subscriptionEndDate || "NA"}
+                    />
                 </div>
             </div>
         </div>
@@ -37,7 +41,15 @@ export default function MyLearnInfoBoxSection() {
 }
 
 
-function PlanCard({ type }: { type: "buy" | "pending" | "activated" }) {
+function PlanCard({
+    type,
+    startDate,
+    endDate
+}: {
+    type: "buy" | "pending" | "activated",
+    startDate: string,
+    endDate: string
+}) {
     switch (type) {
         case "buy":
             return <>
@@ -76,9 +88,9 @@ function PlanCard({ type }: { type: "buy" | "pending" | "activated" }) {
                 </div>
                 {/* <Divider className="my-2 bg-white" /> */}
                 <div className="my-learning-info-box-date-wrap">
-                    <div className="my-learning-info-box-date">Start Date: 01 Apr 2026</div>
+                    <div className="my-learning-info-box-date">Start Date: {startDate}</div>
                     <div className="my-learning-info-box-date-divider"></div>
-                    <div className="my-learning-info-box-date">End Date: 30 Apr 2026</div>
+                    <div className="my-learning-info-box-date">End Date: {endDate}</div>
                 </div>
             </>;
     }
