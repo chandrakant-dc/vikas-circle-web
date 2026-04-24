@@ -123,8 +123,12 @@
 
 .explore-card-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
     gap: 1rem;
+
+    @media screen and (max-width:990px) {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
 }
 
 .faq-section-base {

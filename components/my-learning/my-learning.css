@@ -142,3 +142,41 @@
     color: #FFFFFF;
     font-weight: 400;
 }
+
+.my-learning-info-box-status {
+    color: #FFCC00;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+}
+
+.my-learning-info-box-para {
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.my-learning-info-box-date-wrap {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.my-learning-info-box-date {
+    color: #fff;
+    font-size: 14px;
+}
+
+.my-learning-info-box-date-divider {
+    width: 1px;
+    background: #fff;
+}
+
+.active-course-category-name {
+    color: #000000;
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 2rem;
+}

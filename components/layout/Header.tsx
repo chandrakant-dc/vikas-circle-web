@@ -48,13 +48,15 @@ export default function Header() {
 						className="sm:hidden"
 					/>
 					<NavbarBrand>
-						<Image
-							src={"/logo.png"}
-							alt="blog-card-img"
-							height={200}
-							width={200}
-							className="w-35 h-10"
-						/>
+						<Link href={"/"}>
+							<Image
+								src={"/logo.png"}
+								alt="blog-card-img"
+								height={200}
+								width={200}
+								className="w-35 h-10"
+							/>
+						</Link>
 					</NavbarBrand>
 				</NavbarContent>
 

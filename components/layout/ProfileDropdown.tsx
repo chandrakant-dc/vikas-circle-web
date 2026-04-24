@@ -9,16 +9,20 @@ import {
 import { AppContext } from "@src/context/global/AppContext";
 import useLogout from "@src/hooks/useLogout";
 import LogoutWhiteIcon from "@src/svg/LogoutWhiteIcon";
+import MenuMyLearningIcon from "@src/svg/MenuMyLearningIcon";
 import ProfileDownArrowIcon from "@src/svg/ProfileDownArrowIcon";
 import ProfileUserIcon from "@src/svg/ProfileUserIcon";
 import ResetArrowIcon from "@src/svg/ResetArrowIcon";
 import ResetPassIcon from "@src/svg/ResetPassIcon";
-import { useContext } from "react";
+import Link from "next/link";
+import { useContext, useState } from "react";
 export default function ProfileDropdown() {
 	const { userDetails } = useContext(AppContext);
 	const { handleLogout } = useLogout();
+	const [isOpen, setIsOpen] = useState(false);
+
 	return (
-		<Dropdown>
+		<Dropdown isOpen={isOpen} onOpenChange={setIsOpen}>
 			<DropdownTrigger>
 				<div className="profile-dropdown-trigger">
 					<ProfileUserIcon />
@@ -51,6 +55,27 @@ export default function ProfileDropdown() {
 							</div>
 						</div>
 					</div>
+				</DropdownItem>
+				<DropdownItem
+					key="my-learning"
+					isReadOnly
+					className="
+        bg-white 
+        hover:bg-white 
+        focus:bg-white 
+        data-[hover=true]:bg-white 
+        data-[focus=true]:bg-white 
+        data-[selectable=true]:focus:bg-white
+        cursor-default
+      "
+				>
+					<Link href={"/my-learning"} onClick={() => setIsOpen(false)} className="profile-dropdown-item">
+						<div className="profile-dropdown-item-content">
+							<MenuMyLearningIcon />
+							<span>My Learning</span>
+						</div>
+						<ResetArrowIcon />
+					</Link>
 				</DropdownItem>
 				<DropdownItem
 					key="reset"

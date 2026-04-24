@@ -14,3 +14,7 @@ export const getAllSubCategory = async (categoryId?: string | null) => {
 export const getSubCategoryDetails = async (subcategoryId: string) => {
 	return axiosInstance.get(`/api/v1/subcategory/details/${subcategoryId}`);
 };
+
+export const getActiveCourses = async () => {
+	return axiosInstance.get(`/api/v1/subcategory/active-courses`);
+};

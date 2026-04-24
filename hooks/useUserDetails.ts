@@ -22,4 +22,5 @@ export interface UserDetailsI {
 	fullName: string;
 	email: string;
 	isLoggedIn: boolean;
+	subscription?: "unsubscribed" | "pending" | "activated";
 }

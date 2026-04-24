@@ -57,7 +57,8 @@ axiosInstance.interceptors.response.use(
 			case 400:
 				console.warn("Validation error:", data?.message);
 				addToast({
-					title: data?.message || "Validation error",
+					title: "",
+					description: data?.message || "Validation error",
 					color: "danger",
 				});
 				// toast.error(data?.message || "Validation error")
@@ -87,7 +88,8 @@ axiosInstance.interceptors.response.use(
 			case 500:
 				console.error("Server error:", data?.message);
 				addToast({
-					title: data?.message || "Server error",
+					title: "Server error",
+					description: data?.message || "Server error",
 					color: "danger",
 				});
 				// toast.error(data?.message || "Server error")
