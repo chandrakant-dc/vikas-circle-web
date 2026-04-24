@@ -23,6 +23,10 @@ export const sessionTracking = async (data: {
 	return axiosInstance.post(`/api/session/track`, data);
 };
 
+export const getUserTimeSpent = async () => {
+	return axiosInstance.get(`/api/session/track`);
+}
+
 export const getLoggedInUser = async () => {
 	return axiosInstance.get(`/api/v1/user/details`);
 };

@@ -1,5 +1,6 @@
 import { Divider } from "@heroui/react";
 import useSubscription from "@src/hooks/useSubscription";
+import useUserTimeSpent from "@src/hooks/useUserTimeSpent";
 import LearningBookIcon from "@src/svg/LearningBookIcon";
 import LearningClockIcon from "@src/svg/LearningClockIcon";
 import LearningCrownIcon from "@src/svg/LearningCrownIcon";
@@ -7,9 +8,14 @@ import PlanPendingIcon from "@src/svg/PlanPendingIcon";
 import RightArrowIcon from "@src/svg/RightArrowIcon";
 import Link from "next/link";
 
+function secondsToMinutes(seconds: number): number {
+    return Math.round(seconds / 60);
+}
+
 export default function MyLearnInfoBoxSection() {
     // const { userDetails } = useContext(AppContext);
     const { userSubscriptionDetails } = useSubscription();
+    const { userTimeSpent } = useUserTimeSpent();
     return (
         <div className="section-container py-12!">
             <div className="my-learning-box-container">
@@ -17,14 +23,14 @@ export default function MyLearnInfoBoxSection() {
                     <LearningClockIcon />
                     <div className="my-learning-info-box-title">Today's Learning</div>
                     <div className="my-learning-info-box-bottom-wrap">
-                        <div className="my-learning-info-box-time">45 minutes</div>
+                        <div className="my-learning-info-box-time">{secondsToMinutes(userTimeSpent?.todayTime?.time || 0)} minutes</div>
                     </div>
                 </div>
                 <div className="my-learning-info-box">
                     <LearningBookIcon />
                     <div className="my-learning-info-box-title">Total Learning Time</div>
                     <div className="my-learning-info-box-bottom-wrap">
-                        <div className="my-learning-info-box-time">120 minutes</div>
+                        <div className="my-learning-info-box-time">{secondsToMinutes(userTimeSpent?.totalTime || 0)} minutes</div>
                         <div className="my-learning-info-box-view-more">View More</div>
                     </div>
                 </div>

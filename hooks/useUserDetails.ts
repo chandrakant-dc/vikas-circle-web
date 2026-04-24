@@ -8,10 +8,14 @@ export default function useUserDetails() {
 	useEffect(() => {
 		async function handleGetUserDetails() {
 			setIsLoading(true);
-			const resp = await getLoggedInUser();
-			const details = resp?.data?.data;
-			setUserDetails(details ? { ...details, isLoggedIn: true } : null);
-			setIsLoading(false);
+			try {
+				const resp = await getLoggedInUser();
+				const details = resp?.data?.data;
+				setUserDetails(details ? { ...details, isLoggedIn: true } : null);
+				setIsLoading(false);
+			} catch (error) {
+				setIsLoading(false);
+			}
 		}
 		handleGetUserDetails();
 	}, []);
