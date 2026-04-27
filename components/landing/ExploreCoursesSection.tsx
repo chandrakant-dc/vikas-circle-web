@@ -1,5 +1,12 @@
 "use client";
 import useCategory from "@src/hooks/useCategory";
+import BusinessIcon from "@src/svg/BusinessIcon";
+import CareerIcon from "@src/svg/CareerIcon";
+import DataAnalyticsIcon from "@src/svg/DataAnalyticsIcon";
+import DesignIcon from "@src/svg/DesignIcon";
+import FinanceIcon from "@src/svg/FinanceIcon";
+import MarketingIcon from "@src/svg/MarketingIcon";
+import PersonalityIcon from "@src/svg/PersonalityIcon";
 import RightChevronArrowIcon from "@src/svg/RightChevronArrowIcon";
 import TechPrimaryBoxIcon from "@src/svg/TechPrimaryBoxIcon";
 import Image from "next/image";
@@ -24,6 +31,7 @@ export default function ExploreCoursesSection() {
 							name={item?.name}
 							image={item?.image}
 							id={item?._id}
+							index={i}
 						/>
 					))}
 				</div>
@@ -36,17 +44,19 @@ function ExploreCard({
 	name,
 	image,
 	id,
+	index,
 }: {
 	name: string;
 	image: string;
 	id: string;
+	index: number;
 }) {
 	return (
 		<Link href={`/explore?filter=${id}`} className="explore-card-main">
 			<Image src={image} alt="explore-card-img" height={500} width={500} />
 			<div className="explore-card-content-main">
 				<div className="explore-card-main-svg-wrap">
-					<TechPrimaryBoxIcon />
+					{iconList[index]?.icon || <TechPrimaryBoxIcon />}
 				</div>
 				<div className="explore-content-info">
 					<h6>{name}</h6>
@@ -56,3 +66,30 @@ function ExploreCard({
 		</Link>
 	);
 }
+
+const iconList = [
+	{
+		icon: <TechPrimaryBoxIcon />,
+	},
+	{
+		icon: <DataAnalyticsIcon />,
+	},
+	{
+		icon: <BusinessIcon />,
+	},
+	{
+		icon: <FinanceIcon />,
+	},
+	{
+		icon: <MarketingIcon />,
+	},
+	{
+		icon: <DesignIcon />,
+	},
+	{
+		icon: <PersonalityIcon />,
+	},
+	{
+		icon: <CareerIcon />,
+	},
+];

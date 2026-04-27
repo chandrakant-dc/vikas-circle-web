@@ -1,5 +1,6 @@
 import { addToast } from "@heroui/react";
 import type { ErrResp } from "@src/config/axios-instance";
+import { loginSchema } from "@src/schema/auth.schema";
 import { userLogin } from "@src/services/auth.service";
 // import { login } from "@src/services/auth.service";
 import { useFormik } from "formik";
@@ -15,6 +16,7 @@ export default function useLogin() {
 
 	const formik = useFormik({
 		initialValues,
+		validationSchema: loginSchema,
 		onSubmit: async (val) => {
 			try {
 				setIsLoading(true);

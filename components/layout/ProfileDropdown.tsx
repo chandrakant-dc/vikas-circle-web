@@ -69,7 +69,11 @@ export default function ProfileDropdown() {
         cursor-default
       "
 				>
-					<Link href={"/my-learning"} onClick={() => setIsOpen(false)} className="profile-dropdown-item">
+					<Link
+						href={"/my-learning"}
+						onClick={() => setIsOpen(false)}
+						className="profile-dropdown-item"
+					>
 						<div className="profile-dropdown-item-content">
 							<MenuMyLearningIcon />
 							<span>My Learning</span>

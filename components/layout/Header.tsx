@@ -83,7 +83,11 @@ export default function Header() {
 						</Link>
 					</NavbarItem>
 					<NavbarItem>
-						<Link color="foreground" href="/pricing" className={`h-10 font-medium rounded-[10px] px-4 flex items-center justify-center ${pathname === "/pricing" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
+						<Link
+							color="foreground"
+							href="/pricing"
+							className={`h-10 font-medium rounded-[10px] px-4 flex items-center justify-center ${pathname === "/pricing" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}
+						>
 							Pricing
 						</Link>
 					</NavbarItem>
@@ -144,7 +148,12 @@ export default function Header() {
 						</Link>
 					</NavbarMenuItem>
 					<NavbarMenuItem>
-						<Link onClick={() => setIsMenuOpen(!isMenuOpen)} color="foreground" href="/pricing" className={`h-10 text-[14px] sm:text-[16px] tracking-wider font-medium rounded-[10px] w-fit px-4 flex items-center justify-start ${pathname === "/pricing" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}>
+						<Link
+							onClick={() => setIsMenuOpen(!isMenuOpen)}
+							color="foreground"
+							href="/pricing"
+							className={`h-10 text-[14px] sm:text-[16px] tracking-wider font-medium rounded-[10px] w-fit px-4 flex items-center justify-start ${pathname === "/pricing" ? "bg-[#EEF9FF] text-[#0053DC]" : ""}`}
+						>
 							Pricing
 						</Link>
 					</NavbarMenuItem>

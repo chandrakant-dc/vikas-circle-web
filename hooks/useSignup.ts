@@ -1,4 +1,5 @@
 import { addToast } from "@heroui/react";
+import { registerSchema } from "@src/schema/auth.schema";
 import { type SignUpPayload, userSignup } from "@src/services/auth.service";
 // import { type SignupPayload, signup } from "@src/services/auth.service";
 import { useFormik } from "formik";
@@ -17,6 +18,7 @@ export default function useSignup() {
 
 	const formik = useFormik({
 		initialValues,
+		validationSchema: registerSchema,
 		onSubmit: async (val) => {
 			try {
 				setIsLoading(true);

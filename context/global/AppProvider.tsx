@@ -12,7 +12,7 @@ export default function AppProvider({
 		<AppContext.Provider
 			value={{
 				userDetails,
-				isLoadingUserDetails
+				isLoadingUserDetails,
 			}}
 		>
 			{children}

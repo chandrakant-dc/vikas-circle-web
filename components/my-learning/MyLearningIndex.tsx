@@ -5,11 +5,11 @@ import MyLearnInfoBoxSection from "./MyLearnInfoBoxSection";
 import MyLearningBanner from "./MyLearningBanner";
 import "./my-learning.css";
 export default function MyLearningIndex() {
-    return (
-        <div>
-            <MyLearningBanner />
-            <MyLearnInfoBoxSection />
-            <ActiveCourses />
-        </div>
-    )
+	return (
+		<div>
+			<MyLearningBanner />
+			<MyLearnInfoBoxSection />
+			<ActiveCourses />
+		</div>
+	);
 }

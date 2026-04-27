@@ -25,7 +25,7 @@ export const sessionTracking = async (data: {
 
 export const getUserTimeSpent = async () => {
 	return axiosInstance.get(`/api/session/track`);
-}
+};
 
 export const getLoggedInUser = async () => {
 	return axiosInstance.get(`/api/v1/user/details`);

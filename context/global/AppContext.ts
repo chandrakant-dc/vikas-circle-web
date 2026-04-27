@@ -9,7 +9,7 @@ interface AppContextI {
 
 const initVal: AppContextI = {
 	userDetails: null,
-	isLoadingUserDetails: false
+	isLoadingUserDetails: false,
 };
 
 export const AppContext = createContext<AppContextI>(initVal);

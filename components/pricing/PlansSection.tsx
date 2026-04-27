@@ -21,21 +21,26 @@ export default function PlansSection() {
 	} = useDisclosure();
 	const { isOpen, onOpen, onOpenChange, onClose } = useDisclosure();
 	const { userDetails } = useContext(AppContext);
-	const [selectedPlanInfo, setSelectedPlanInfo] = useState<null | SelectedPlanI>(null);
+	const [selectedPlanInfo, setSelectedPlanInfo] =
+		useState<null | SelectedPlanI>(null);
 	const { planList } = usePlan();
 
-	const handleBuyPlan = (planName: string, planPrice: number, planId: string) => {
+	const handleBuyPlan = (
+		planName: string,
+		planPrice: number,
+		planId: string,
+	) => {
 		setSelectedPlanInfo({
 			name: planName,
 			price: planPrice,
-			planId: planId
-		})
+			planId: planId,
+		});
 		if (userDetails?.isLoggedIn) {
-			onOpen()
+			onOpen();
 		} else {
-			onOpenL()
+			onOpenL();
 		}
-	}
+	};
 	return (
 		<>
 			<div className="plans-section-base">
@@ -48,53 +53,45 @@ export default function PlansSection() {
 					</div>
 					<div className="pricing-card-container">
 						<div className="flex items-center justify-between gap-4">
-							{
-								planList.map((plan, idx) => (
-									<div className={`pricing-card ${idx === 1 ? "active" : ""}`} key={`plan-card-${idx + 1}`}>
-										<div>
-											<div className="pricing-card-label">{plan?.name}</div>
-										</div>
-										<div>
-											<div className="pricing-card-price">
-												₹{plan?.price} <sub>/month</sub>
-											</div>
-										</div>
-										<Divider className="bg-[#9D00FF]" />
-										<div className="pricing-card-feat">
-											{
-												idx === 1 ?
-													<AdsWhiteIcon />
-													:
-													<AdsIcon />
-											}
-											<div className="pricing-card-feat-label">No Ads</div>
-										</div>
-										<div className="pricing-card-feat">
-											{
-												idx === 1 ?
-													<TimerWhiteIcon />
-													:
-													<TimerIcon />
-											}
-											<div className="pricing-card-feat-label">
-												Daily limit - {plan?.dailyLimit} minutes
-											</div>
-										</div>
-										<div className="pricing-card-feat">
-											{
-												idx === 1 ?
-													<QuizWhiteIcon />
-													:
-													<QuizIcon />
-											}
-											<div className="pricing-card-feat-label">Quizzes</div>
-										</div>
-										<button type="button" onClick={() => handleBuyPlan(plan?.name, plan?.price, plan?._id)} className={`${idx === 1 ? "cta-default" : "cta-primary"} max-w-full!`}>
-											Buy Now <RightArrowIcon />
-										</button>
+							{planList.map((plan, idx) => (
+								<div
+									className={`pricing-card ${idx === 1 ? "active" : ""}`}
+									key={`plan-card-${idx + 1}`}
+								>
+									<div>
+										<div className="pricing-card-label">{plan?.name}</div>
 									</div>
-								))
-							}
+									<div>
+										<div className="pricing-card-price">
+											₹{plan?.price} <sub>/month</sub>
+										</div>
+									</div>
+									<Divider className="bg-[#9D00FF]" />
+									<div className="pricing-card-feat">
+										{idx === 1 ? <AdsWhiteIcon /> : <AdsIcon />}
+										<div className="pricing-card-feat-label">No Ads</div>
+									</div>
+									<div className="pricing-card-feat">
+										{idx === 1 ? <TimerWhiteIcon /> : <TimerIcon />}
+										<div className="pricing-card-feat-label">
+											Daily limit - {plan?.dailyLimit} minutes
+										</div>
+									</div>
+									<div className="pricing-card-feat">
+										{idx === 1 ? <QuizWhiteIcon /> : <QuizIcon />}
+										<div className="pricing-card-feat-label">Quizzes</div>
+									</div>
+									<button
+										type="button"
+										onClick={() =>
+											handleBuyPlan(plan?.name, plan?.price, plan?._id)
+										}
+										className={`${idx === 1 ? "cta-default" : "cta-primary"} max-w-full!`}
+									>
+										Buy Now <RightArrowIcon />
+									</button>
+								</div>
+							))}
 							{/* <div className="pricing-card">
 								<div>
 									<div className="pricing-card-label">Basic</div>

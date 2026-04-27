@@ -15,6 +15,7 @@ export default function useUserDetails() {
 				setIsLoading(false);
 			} catch (error) {
 				setIsLoading(false);
+				throw error;
 			}
 		}
 		handleGetUserDetails();
@@ -22,7 +23,7 @@ export default function useUserDetails() {
 
 	return {
 		userDetails,
-		isLoadingUserDetails
+		isLoadingUserDetails,
 	};
 }
 

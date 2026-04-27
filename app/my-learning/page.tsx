@@ -6,24 +6,24 @@ import { useRouter } from "next/navigation";
 import { useContext, useEffect } from "react";
 
 export default function MyLearningPage() {
-    const { userDetails, isLoadingUserDetails } = useContext(AppContext);
-    const router = useRouter();
+	const { userDetails, isLoadingUserDetails } = useContext(AppContext);
+	const router = useRouter();
 
-    useEffect(() => {
-        if (isLoadingUserDetails === false) {
-            if (userDetails === null) {
-                router.push("/");
-            }
-        }
-    }, [isLoadingUserDetails, userDetails, router]);
+	useEffect(() => {
+		if (isLoadingUserDetails === false) {
+			if (userDetails === null) {
+				router.push("/");
+			}
+		}
+	}, [isLoadingUserDetails, userDetails, router]);
 
-    if (isLoadingUserDetails) {
-        return <div>Loading...</div>;
-    }
+	if (isLoadingUserDetails) {
+		return <div>Loading...</div>;
+	}
 
-    if (!userDetails?.isLoggedIn) {
-        return null;
-    }
+	if (!userDetails?.isLoggedIn) {
+		return null;
+	}
 
-    return <MyLearningIndex />;
+	return <MyLearningIndex />;
 }
