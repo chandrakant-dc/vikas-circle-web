@@ -27,6 +27,7 @@ export default function BlogSection() {
 								// description={item?.description}
 								date={item?.date}
 								slug={item?.slug}
+								index={i}
 							/>
 						))}
 					</div>
@@ -42,21 +43,23 @@ function BlogCard({
 	// description,
 	date,
 	slug,
+	index,
 }: {
 	title: string;
 	tag: string;
 	// description: string;
 	date: string;
 	slug: string;
+	index: number;
 }) {
 	return (
 		<div className="blog-card">
 			<div className="blog-card-img-wrap">
 				<Image
-					src={"/blog-card-bg-1.jpg"}
+					src={`/blog/blog-${index + 1}.png`}
 					alt="blog-card-img"
-					height={200}
-					width={200}
+					height={400}
+					width={400}
 				/>
 				<div className="blog-tag">{tag}</div>
 			</div>

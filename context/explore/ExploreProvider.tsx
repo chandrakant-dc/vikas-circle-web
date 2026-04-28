@@ -9,7 +9,13 @@ export default function ExploreProvider({
 	children: React.ReactNode;
 }) {
 	const { categoryList } = useCategory();
-	const { handleUpdateSearchParam, categoryId, subCategoryList } = useExplore();
+	const {
+		handleUpdateSearchParam,
+		categoryId,
+		subCategoryList,
+		setSearchStr,
+		handleSubmitSearch,
+	} = useExplore();
 	return (
 		<ExploreContext.Provider
 			value={{
@@ -17,6 +23,8 @@ export default function ExploreProvider({
 				handleUpdateSearchParam,
 				categoryId,
 				subCategoryList,
+				setSearchStr,
+				handleSubmitSearch,
 			}}
 		>
 			{children}

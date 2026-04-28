@@ -37,7 +37,11 @@ export default function LearningMaterial() {
 						</Link>
 					</div>
 				</div> */}
-
+				{topicList.length === 0 && (
+					<p className="text-[14px] text-gray-500 text-center">
+						No learning materials found.
+					</p>
+				)}
 				{topicList.map((item, i) => (
 					<div
 						className={`learning-topic-item ${item?.status === "completed" ? "completed" : "pending"}`}

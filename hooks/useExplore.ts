@@ -8,11 +8,26 @@ export default function useExplore() {
 	const router = useRouter();
 	const pathname = usePathname();
 	const searchParams = useSearchParams();
-	const categoryId = searchParams.get(ExploreSearchParam);
+	const categoryId = searchParams.get(ExploreSearchParam) || "all";
+	const [searchStr, setSearchStr] = useState<string>("");
+	// const [debouncedSearch, setDebouncedSearch] = useState<string>("");
 
 	const [subCategoryList, setSubCategoryList] = useState<SubCategoryListI[]>(
 		[],
 	);
+
+	const handleSubmitSearch = async () => {
+		const resp = await getAllSubCategory(categoryId, searchStr);
+		setSubCategoryList(resp?.data?.data || []);
+	};
+
+	// useEffect(() => {
+	// 	const timer = setTimeout(() => {
+	// 		setDebouncedSearch(searchStr);
+	// 	}, 500);
+
+	// 	return () => clearTimeout(timer);
+	// }, [searchStr]);
 
 	const createQueryString = useCallback(
 		(name: string, value: string) => {
@@ -31,8 +46,11 @@ export default function useExplore() {
 	}
 
 	useEffect(() => {
-		async function handleGetAllSubCategory(categoryId?: string | null) {
-			const resp = await getAllSubCategory(categoryId);
+		async function handleGetAllSubCategory(
+			categoryId?: string | null,
+			search?: string,
+		) {
+			const resp = await getAllSubCategory(categoryId, search);
 			setSubCategoryList(resp?.data?.data || []);
 		}
 
@@ -43,6 +61,8 @@ export default function useExplore() {
 		handleUpdateSearchParam,
 		categoryId,
 		subCategoryList,
+		setSearchStr,
+		handleSubmitSearch,
 	};
 }
 

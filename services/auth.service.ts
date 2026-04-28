@@ -32,7 +32,11 @@ export const getLoggedInUser = async () => {
 };
 
 export const userLogout = async () => {
-	return axiosInstance.post(`api/v1/user/logout`);
+	return axiosInstance.post(`/api/v1/user/logout`);
+};
+
+export const resetPassword = async (data: { newPassword: string }) => {
+	return axiosInstance.post(`/api/v1/user/reset-password`, data);
 };
 
 export interface LoginPayload {

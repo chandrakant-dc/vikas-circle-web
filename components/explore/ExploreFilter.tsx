@@ -7,11 +7,13 @@ import { useContext } from "react";
 export default function ExploreFilter() {
 	const { categoryList, handleUpdateSearchParam, categoryId } =
 		useContext(ExploreContext);
+	console.log(categoryId);
+
 	return (
 		<div className="explore-filter">
 			<div className="explore-filter-label">Filter by Category</div>
 			<Divider className="my-2" />
-			{categoryList.map((item, i) => (
+			{[{ _id: "all", name: "All" }, ...categoryList].map((item, i) => (
 				<button
 					type="button"
 					key={`explore-filter-${i + 1}`}

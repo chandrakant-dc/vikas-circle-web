@@ -21,6 +21,7 @@ export default function useTopicContent(topicId: string) {
 
 export interface TopicDetailsI {
 	_id: string;
+	subcategory: string;
 	topicName: string;
 	description: string;
 }

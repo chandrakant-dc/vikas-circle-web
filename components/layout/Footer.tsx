@@ -57,7 +57,12 @@ export default function Footer() {
 									</Link>
 								</li>
 								<li>
-									<Link href={"/pricing"}>Pricing</Link>
+									<Link
+										href={"/pricing"}
+										className={`${pathname === "/pricing" ? "underline underline-offset-4" : ""}`}
+									>
+										Pricing
+									</Link>
 								</li>
 								<li>
 									<Link
@@ -73,12 +78,20 @@ export default function Footer() {
 							<h4 className="footer-title">Legal</h4>
 							<ul>
 								<li>
-									<Link target="_blank" href={"/privacy-policy"}>
+									<Link
+										target="_blank"
+										href={"/privacy-policy"}
+										className={`${pathname === "/privacy-policy" ? "underline underline-offset-4" : ""}`}
+									>
 										Privacy Policy
 									</Link>
 								</li>
 								<li>
-									<Link target="_blank" href={"/terms-conditions"}>
+									<Link
+										target="_blank"
+										href={"/terms-conditions"}
+										className={`${pathname === "/terms-conditions" ? "underline underline-offset-4" : ""}`}
+									>
 										Terms & Conditions
 									</Link>
 								</li>

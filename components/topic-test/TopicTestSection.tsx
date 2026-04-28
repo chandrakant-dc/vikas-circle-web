@@ -248,7 +248,11 @@ export default function TopicTestSection() {
 				goToQuestion={goToQuestion}
 				onOpen={onOpen}
 			/>
-			<ResultModal isOpen={isOpenR} onOpenChange={onOpenChangeR} />
+			<ResultModal
+				isOpen={isOpenR}
+				onOpenChange={onOpenChangeR}
+				subcategoryId={topicDetails?.subcategory}
+			/>
 		</>
 	);
 }

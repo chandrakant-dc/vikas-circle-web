@@ -6,11 +6,15 @@ import { useRouter } from "next/navigation";
 import { useContext } from "react";
 import "./result-modal.css";
 
-export default function ResultModal({ isOpen, onOpenChange }: ResultModalProp) {
+export default function ResultModal({
+	isOpen,
+	onOpenChange,
+	subcategoryId,
+}: ResultModalProp) {
 	const { topicQuizResult } = useContext(TopicTestContext);
 	const navigate = useRouter();
 	const handleRedirect = () => {
-		navigate.back();
+		navigate.push(`/explore/${subcategoryId}`);
 	};
 	return (
 		<Modal
@@ -158,4 +162,5 @@ export default function ResultModal({ isOpen, onOpenChange }: ResultModalProp) {
 interface ResultModalProp {
 	isOpen: boolean;
 	onOpenChange: () => void;
+	subcategoryId?: string;
 }

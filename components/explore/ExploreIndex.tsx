@@ -22,6 +22,11 @@ export default function ExploreIndex() {
 						<ExploreFilter />
 					</div>
 					<div className="explore-cards-container">
+						{subCategoryList.length === 0 && (
+							<p className="text-[14px] text-gray-500 text-center">
+								No courses found.
+							</p>
+						)}
 						{subCategoryList.map((item, i) => (
 							<ExploreCard
 								key={`explore-card-${i + 1}`}

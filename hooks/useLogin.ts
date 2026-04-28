@@ -1,5 +1,4 @@
 import { addToast } from "@heroui/react";
-import type { ErrResp } from "@src/config/axios-instance";
 import { loginSchema } from "@src/schema/auth.schema";
 import { userLogin } from "@src/services/auth.service";
 // import { login } from "@src/services/auth.service";
@@ -33,11 +32,11 @@ export default function useLogin() {
 				}, 2000);
 				setIsLoading(false);
 			} catch (error) {
-				const err = error as ErrResp;
-				addToast({
-					title: err?.response?.data?.message || "something went wrong",
-					color: "danger",
-				});
+				// const err = error as ErrResp;
+				// addToast({
+				// 	title: err?.response?.data?.message || "something went wrong",
+				// 	color: "danger",
+				// });
 				setIsLoading(false);
 				throw error;
 			}
