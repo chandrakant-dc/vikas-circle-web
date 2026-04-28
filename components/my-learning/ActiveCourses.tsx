@@ -13,7 +13,7 @@ export default function ActiveCourses() {
 		if (userDetails?.isLoggedIn) {
 			handleGetActiveCourses();
 		}
-	}, [userDetails, handleGetActiveCourses]);
+	}, [userDetails]);
 
 	return (
 		<div className="active-courses-section-base">
