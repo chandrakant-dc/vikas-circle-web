@@ -9,11 +9,6 @@ const robotoSans = Roboto({
 	subsets: ["latin"],
 });
 
-// const geistMono = Geist_Mono({
-// 	variable: "--font-geist-mono",
-// 	subsets: ["latin"],
-// });
-
 export const metadata: Metadata = {
 	title: "Vikas Circle",
 	description: "Vikas Circle",
@@ -34,6 +29,11 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
+			<head>
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9872794516401798"
+					crossOrigin="anonymous"></script>
+			</head>
+
 			<body className={`${robotoSans.variable} antialiased`}>
 				<AppProvider>
 					<Providers>{children}</Providers>
